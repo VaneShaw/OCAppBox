@@ -1,0 +1,46 @@
+PODS:
+  - OCAppBox (0.1.0):
+    - OCAppBox/Umbrella (= 0.1.0)
+  - OCAppBox/Core (0.1.0):
+    - OCAppBox/Foundation
+  - OCAppBox/Foundation (0.1.0)
+  - OCAppBox/Infra (0.1.0):
+    - OCAppBox/Foundation
+  - OCAppBox/Module (0.1.0):
+    - OCAppBox/Core
+    - OCAppBox/Foundation
+    - OCAppBox/Service
+    - OCAppBox/UI
+  - OCAppBox/Service (0.1.0):
+    - OCAppBox/Core
+    - OCAppBox/Foundation
+    - OCAppBox/Infra
+  - OCAppBox/Support (0.1.0):
+    - OCAppBox/Core
+    - OCAppBox/Foundation
+    - OCAppBox/Service
+    - OCAppBox/UI
+  - OCAppBox/UI (0.1.0):
+    - OCAppBox/Foundation
+  - OCAppBox/Umbrella (0.1.0):
+    - OCAppBox/Core
+    - OCAppBox/Foundation
+    - OCAppBox/Infra
+    - OCAppBox/Module
+    - OCAppBox/Service
+    - OCAppBox/Support
+    - OCAppBox/UI
+
+DEPENDENCIES:
+  - OCAppBox (from `..`)
+
+EXTERNAL SOURCES:
+  OCAppBox:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  OCAppBox: 78ebef41bbbd91dc2b5098635c288af398386a00
+
+PODFILE CHECKSUM: 1666ac6c42b152fde05152f8bfa020a683170464
+
+COCOAPODS: 1.16.2
