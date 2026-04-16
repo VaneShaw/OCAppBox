@@ -21,11 +21,16 @@ FOUNDATION_EXPORT NSString * const OCBPermissionStatusUserInfoKey;
 - (OCBPermissionStatus)statusForPermission:(NSString *)permissionKey;
 - (void)requestPermission:(NSString *)permissionKey
                completion:(void (^)(OCBPermissionStatus status))completion;
-- (void)setMockStatus:(OCBPermissionStatus)status forPermission:(NSString *)permissionKey;
 
 @end
 
-@interface OCBPermissionService : NSObject <OCBPermissionProviding>
+@protocol OCBMutablePermissionProviding <OCBPermissionProviding>
+
+- (void)updateStatus:(OCBPermissionStatus)status forPermission:(NSString *)permissionKey;
+
+@end
+
+@interface OCBPermissionService : NSObject <OCBMutablePermissionProviding>
 
 - (instancetype)initWithStorage:(id<OCBStorageProviding>)storage
                          logger:(id<OCBLogging>)logger NS_DESIGNATED_INITIALIZER;

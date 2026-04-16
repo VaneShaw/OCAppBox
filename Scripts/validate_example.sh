@@ -7,6 +7,9 @@ EXAMPLE_DIR="$ROOT_DIR/Example"
 WORKSPACE_PATH="$EXAMPLE_DIR/OCAppBoxExample.xcworkspace"
 APP_SCHEME_NAME="OCAppBoxExample"
 DERIVED_DATA_PATH="$ROOT_DIR/build/DerivedData"
+GENERATED_APP_ROOT="$ROOT_DIR/build/generator-smoke"
+GENERATED_APP_DIR="$GENERATED_APP_ROOT/SmokeHost"
+GENERATED_DERIVED_DATA_PATH="$ROOT_DIR/build/GeneratedDerivedData"
 TMP_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/ocappbox-validate.XXXXXX")"
 
 cleanup() {
@@ -77,5 +80,32 @@ xcodebuild \
 echo "==> Smoke testing generators"
 ruby "$ROOT_DIR/Scripts/generate_module.rb" SmokeModule --output "$TMP_ROOT/Module"
 ruby "$ROOT_DIR/Scripts/generate_service.rb" SmokeService --domain Smoke --output "$TMP_ROOT/Service"
+ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule Feed --type plain --output "$TMP_ROOT/Page/Plain"
+ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule FeedTable --type table --output "$TMP_ROOT/Page/Table"
+ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule FeedGrid --type collection --output "$TMP_ROOT/Page/Collection"
+ruby "$ROOT_DIR/Scripts/generate_app.rb" SmokeHost --output "$GENERATED_APP_ROOT" --force
+
+test -f "$TMP_ROOT/Page/Plain/OCBSmokeModuleFeedViewController.m"
+test -f "$TMP_ROOT/Page/Table/OCBSmokeModuleFeedTableViewController.m"
+test -f "$TMP_ROOT/Page/Collection/OCBSmokeModuleFeedGridViewController.m"
+test -f "$GENERATED_APP_DIR/Podfile"
+test -f "$GENERATED_APP_DIR/SmokeHost.xcodeproj/project.pbxproj"
+
+echo "==> Installing generated app dependencies"
+(
+  cd "$GENERATED_APP_DIR"
+  pod install
+)
+
+echo "==> Building generated app workspace"
+xcodebuild \
+  -workspace "$GENERATED_APP_DIR/SmokeHost.xcworkspace" \
+  -scheme "SmokeHost" \
+  -configuration Debug \
+  -destination "generic/platform=iOS" \
+  -derivedDataPath "$GENERATED_DERIVED_DATA_PATH" \
+  CODE_SIGNING_ALLOWED=NO \
+  build \
+  -quiet
 
 echo "Validation passed."

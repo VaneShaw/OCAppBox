@@ -178,7 +178,7 @@
 
 - (void)toggleEmptyStateFeature
 {
-    id<OCBRemoteConfigProviding> remoteConfig = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBRemoteConfigProviding)];
+    id<OCBMutableRemoteConfigProviding> remoteConfig = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutableRemoteConfigProviding)];
     BOOL enabled = [remoteConfig boolValueForKey:@"feature.empty_state_demo" defaultValue:YES];
     [remoteConfig applyConfigDictionary:@{
         @"feature.empty_state_demo": @(!enabled)

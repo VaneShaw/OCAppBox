@@ -69,10 +69,12 @@ test_group = project.main_group.new_group(TEST_TARGET_NAME, TEST_TARGET_NAME)
   ],
   test_group => %w[
     OCBAppContextTests.m
+    OCBFoundationTests.m
     OCBDemoAppLauncherTests.m
     OCBModuleManagerTests.m
     OCBRouterTests.m
     OCBServiceRegistryTests.m
+    OCBUIBaseControllerTests.m
     OCBCacheCenterTests.m
   ]
 }.each do |group, files|

@@ -370,9 +370,13 @@
 - (void)requestCameraPermission
 {
     id<OCBPermissionProviding> permissionService = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBPermissionProviding)];
+    id<OCBMutablePermissionProviding> mutablePermissionService = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutablePermissionProviding)];
 
     [self showLoadingWithText:@"Requesting camera permission"];
     [permissionService requestPermission:@"camera" completion:^(OCBPermissionStatus status) {
+        if (status == OCBPermissionStatusUnknown) {
+            [mutablePermissionService updateStatus:OCBPermissionStatusAuthorized forPermission:@"camera"];
+        }
         [self hideLoading];
         [self reloadServiceState];
     }];

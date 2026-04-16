@@ -75,8 +75,10 @@ Sources/OCAppBox
 当前仓库已经补齐一版 `Foundation` 起步能力：
 
 - `OCBFoundationMacros`
+- `NSArray+OCBAdditions`
 - `NSString+OCBAdditions`
 - `NSDictionary+OCBAdditions`
+- `UIColor+OCBAdditions`
 - `OCBAppMetadata`
 
 ### 3.3 Infra
@@ -174,6 +176,15 @@ Sources/OCAppBox
 - `OCBDebugPanelViewController`
 - `ocb://support/debug` 调试路由
 
+当前 `UI` 层也已经补上第一版页面起步基座：
+
+- `OCBBaseViewController`
+- `OCBBaseTableViewController`
+- `OCBBaseCollectionViewController`
+- `OCBToast`
+- `OCBLoadingView`
+- `OCBEmptyStateView`
+
 ## 4. 技术路线建议
 
 ### 4.1 第一阶段：单仓库基础版
@@ -243,6 +254,14 @@ ruby Scripts/generate_service.rb FeatureFlag --domain Config
 
 默认会生成一个带 `Providing 协议 + 默认实现 + storage/logger 注入点` 的服务骨架，适合作为远程配置、功能开关和业务公共状态中心的起点。
 生成后的服务实现默认带自动导出宏，`OCBAppContext` 初始化时会自动注册。
+
+当前仓库也已提供页面生成脚本：
+
+```bash
+ruby Scripts/generate_page.rb Home Feed --type table
+```
+
+默认会根据页面类型生成 `plain / table / collection` 三类 `ViewController` 骨架，并落到对应模块的 `UI` 目录。
 
 当前仓库也已提供最小回归校验脚本：
 

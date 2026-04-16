@@ -9,7 +9,6 @@ FOUNDATION_EXPORT NSString * const OCBRemoteConfigDidChangeNotification;
 
 @protocol OCBRemoteConfigProviding <NSObject>
 
-- (void)applyConfigDictionary:(NSDictionary<NSString *, id> *)config;
 - (NSDictionary<NSString *, id> *)allValues;
 - (nullable NSString *)stringValueForKey:(NSString *)key defaultValue:(nullable NSString *)defaultValue;
 - (BOOL)boolValueForKey:(NSString *)key defaultValue:(BOOL)defaultValue;
@@ -17,7 +16,13 @@ FOUNDATION_EXPORT NSString * const OCBRemoteConfigDidChangeNotification;
 
 @end
 
-@interface OCBRemoteConfigService : NSObject <OCBRemoteConfigProviding>
+@protocol OCBMutableRemoteConfigProviding <OCBRemoteConfigProviding>
+
+- (void)applyConfigDictionary:(NSDictionary<NSString *, id> *)config;
+
+@end
+
+@interface OCBRemoteConfigService : NSObject <OCBMutableRemoteConfigProviding>
 
 - (instancetype)initWithStorage:(id<OCBStorageProviding>)storage
                          logger:(id<OCBLogging>)logger NS_DESIGNATED_INITIALIZER;

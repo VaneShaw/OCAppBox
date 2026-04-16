@@ -33,14 +33,12 @@
     [self.logger logWithLevel:OCBLogLevelInfo
                       message:[NSString stringWithFormat:@"Start signing in user: %@", displayName]];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.35 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        OCBUserSession *session = [[OCBUserSession alloc] initWithUserIdentifier:userIdentifier
-                                                                     displayName:displayName
-                                                                       authToken:token
-                                                                       loginDate:[NSDate date]];
-        [self.userSessionService updateSession:session];
-        OCB_SAFE_BLOCK(completion, session, nil);
-    });
+    OCBUserSession *session = [[OCBUserSession alloc] initWithUserIdentifier:userIdentifier
+                                                                 displayName:displayName
+                                                                   authToken:token
+                                                                   loginDate:[NSDate date]];
+    [self.userSessionService updateSession:session];
+    OCB_SAFE_BLOCK(completion, session, nil);
 }
 
 - (void)signOut

@@ -48,20 +48,14 @@ static NSString * const OCBPermissionStorageKey = @"service.permission.statuses"
                completion:(void (^)(OCBPermissionStatus status))completion
 {
     OCBPermissionStatus currentStatus = [self statusForPermission:permissionKey];
-    OCBPermissionStatus nextStatus = currentStatus == OCBPermissionStatusUnknown
-        ? OCBPermissionStatusAuthorized
-        : currentStatus;
 
     [self.logger logWithLevel:OCBLogLevelInfo
                       message:[NSString stringWithFormat:@"Request permission: %@", permissionKey]];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self setMockStatus:nextStatus forPermission:permissionKey];
-        OCB_SAFE_BLOCK(completion, nextStatus);
-    });
+    OCB_SAFE_BLOCK(completion, currentStatus);
 }
 
-- (void)setMockStatus:(OCBPermissionStatus)status forPermission:(NSString *)permissionKey
+- (void)updateStatus:(OCBPermissionStatus)status forPermission:(NSString *)permissionKey
 {
     if (permissionKey.length == 0) {
         return;

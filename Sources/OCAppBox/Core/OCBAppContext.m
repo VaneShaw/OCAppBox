@@ -52,10 +52,10 @@
                                                                                           logger:logger];
     id<OCBAuthenticating> authService = [[OCBAuthService alloc] initWithUserSessionService:sessionService
                                                                                      logger:logger];
-    id<OCBPermissionProviding> permissionService = [[OCBPermissionService alloc] initWithStorage:storage
-                                                                                           logger:logger];
-    id<OCBRemoteConfigProviding> remoteConfigService = [[OCBRemoteConfigService alloc] initWithStorage:storage
-                                                                                                 logger:logger];
+    id<OCBMutablePermissionProviding> permissionService = [[OCBPermissionService alloc] initWithStorage:storage
+                                                                                                   logger:logger];
+    id<OCBMutableRemoteConfigProviding> remoteConfigService = [[OCBRemoteConfigService alloc] initWithStorage:storage
+                                                                                                           logger:logger];
 
     [self.serviceRegistry registerService:logger forProtocol:@protocol(OCBLogging)];
     [self.serviceRegistry registerService:storage forProtocol:@protocol(OCBStorageProviding)];
@@ -64,7 +64,9 @@
     [self.serviceRegistry registerService:sessionService forProtocol:@protocol(OCBUserSessionProviding)];
     [self.serviceRegistry registerService:authService forProtocol:@protocol(OCBAuthenticating)];
     [self.serviceRegistry registerService:permissionService forProtocol:@protocol(OCBPermissionProviding)];
+    [self.serviceRegistry registerService:permissionService forProtocol:@protocol(OCBMutablePermissionProviding)];
     [self.serviceRegistry registerService:remoteConfigService forProtocol:@protocol(OCBRemoteConfigProviding)];
+    [self.serviceRegistry registerService:remoteConfigService forProtocol:@protocol(OCBMutableRemoteConfigProviding)];
 }
 
 - (void)registerExportedServices

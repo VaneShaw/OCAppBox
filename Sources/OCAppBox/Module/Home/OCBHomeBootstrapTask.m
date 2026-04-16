@@ -26,7 +26,7 @@
                 launchOptions:(NSDictionary *)launchOptions
 {
     id<OCBLogging> logger = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBLogging)];
-    id<OCBRemoteConfigProviding> remoteConfigService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBRemoteConfigProviding)];
+    id<OCBMutableRemoteConfigProviding> remoteConfigService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutableRemoteConfigProviding)];
     NSDictionary<NSString *, id> *existingConfig = [remoteConfigService allValues];
     NSMutableDictionary<NSString *, id> *seedConfig = [[NSMutableDictionary alloc] init];
 

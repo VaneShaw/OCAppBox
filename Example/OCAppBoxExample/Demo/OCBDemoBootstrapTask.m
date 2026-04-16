@@ -23,8 +23,8 @@
     id<OCBLogging> logger = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBLogging)];
     id<OCBStorageProviding> storage = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBStorageProviding)];
     id<OCBNetworking> network = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBNetworking)];
-    id<OCBPermissionProviding> permissionService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBPermissionProviding)];
-    id<OCBRemoteConfigProviding> remoteConfigService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBRemoteConfigProviding)];
+    id<OCBMutablePermissionProviding> permissionService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutablePermissionProviding)];
+    id<OCBMutableRemoteConfigProviding> remoteConfigService = [appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutableRemoteConfigProviding)];
 
     [storage setMemoryObject:appContext.environment forKey:@"demo.environment"];
     [storage setDiskObject:[NSString stringWithFormat:@"boot:%@", [NSDate date]] forKey:@"demo.lastLaunch"];
@@ -36,7 +36,7 @@
         [logger logWithLevel:OCBLogLevelDebug message:[NSString stringWithFormat:@"Network baseURL prepared: %@", networkClient.baseURL.absoluteString]];
     }
 
-    [permissionService setMockStatus:OCBPermissionStatusUnknown forPermission:@"camera"];
+    [permissionService updateStatus:OCBPermissionStatusUnknown forPermission:@"camera"];
     [remoteConfigService applyConfigDictionary:@{
         @"home.headline": @"Service Layer Ready",
         @"home.welcome.copy": @"UserSession、Auth、Permission、RemoteConfig 已接入 Demo 页面，可以直接作为业务公共服务入口。",

@@ -174,7 +174,7 @@
 
 - (void)applyRemoteConfig
 {
-    id<OCBRemoteConfigProviding> remoteConfig = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBRemoteConfigProviding)];
+    id<OCBMutableRemoteConfigProviding> remoteConfig = [self.appContext.serviceRegistry serviceForProtocol:@protocol(OCBMutableRemoteConfigProviding)];
     NSInteger refreshVersion = [remoteConfig integerValueForKey:@"account.refresh.version" defaultValue:0] + 1;
 
     [self showLoadingWithText:@"Refreshing remote config"];
