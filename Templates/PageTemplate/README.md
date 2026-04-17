@@ -15,4 +15,4 @@ ruby Scripts/generate_page.rb Home Feed --type table
 ruby Scripts/generate_page.rb Account Profile --type collection
 ```
 
-默认会生成到 `Sources/OCAppBox/Module/<ModuleName>/UI`。
+默认会生成到 `App/Module/<ModuleName>/UI`。

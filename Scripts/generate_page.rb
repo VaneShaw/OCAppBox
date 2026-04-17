@@ -5,7 +5,7 @@ require 'optparse'
 
 ROOT = File.expand_path('..', __dir__)
 TEMPLATE_ROOT = File.join(ROOT, 'Templates', 'PageTemplate')
-DEFAULT_MODULE_ROOT = File.join(ROOT, 'Sources', 'OCAppBox', 'Module')
+DEFAULT_MODULE_ROOT = File.join(ROOT, 'App', 'Module')
 SUPPORTED_TYPES = %w[plain table collection].freeze
 
 def underscore(camel_case_name)
@@ -43,8 +43,20 @@ def usage_banner
     Examples:
       ruby Scripts/generate_page.rb Home Feed --type table
       ruby Scripts/generate_page.rb Account Profile --type collection --title "Profile Grid"
-      ruby Scripts/generate_page.rb Demo Settings --prefix DEM --output Example/MyApp/MyApp/Demo
+      ruby Scripts/generate_page.rb Profile Settings --type plain --output App/Module/Profile/UI
   TEXT
+end
+
+def sync_project_if_needed(output_root)
+  sync_root = File.join(ROOT, 'App')
+  expanded_output_root = File.expand_path(output_root)
+  return unless expanded_output_root.start_with?(sync_root)
+
+  sync_script = File.join(ROOT, 'Scripts', 'generate_project.rb')
+  return unless File.exist?(sync_script)
+
+  success = system('ruby', sync_script)
+  warn 'Warning: failed to refresh starter app project.' unless success
 end
 
 options = {
@@ -68,7 +80,7 @@ parser = OptionParser.new do |opts|
     options[:prefix] = value
   end
 
-  opts.on('--output PATH', 'Custom output directory. Default: Sources/OCAppBox/Module/<ModuleName>/UI') do |value|
+  opts.on('--output PATH', 'Custom output directory. Default: App/Module/<ModuleName>/UI') do |value|
     options[:output_root] = File.expand_path(value)
   end
 
@@ -144,3 +156,5 @@ end
 puts "Generated #{options[:type]} page #{page_class_name}"
 puts "  Module: #{module_name}"
 puts "  Output: #{output_root}"
+
+sync_project_if_needed(output_root)

@@ -5,7 +5,7 @@ require 'optparse'
 
 ROOT = File.expand_path('..', __dir__)
 TEMPLATE_ROOT = File.join(ROOT, 'Templates', 'ModuleTemplate')
-DEFAULT_OUTPUT_ROOT = File.join(ROOT, 'Sources', 'OCAppBox', 'Module')
+DEFAULT_OUTPUT_ROOT = File.join(ROOT, 'App', 'Module')
 
 def underscore(camel_case_name)
   camel_case_name
@@ -36,6 +36,18 @@ def usage_banner
       ruby Scripts/generate_module.rb Home
       ruby Scripts/generate_module.rb AccountCenter --route ocb://account-center --title "Account Center"
   TEXT
+end
+
+def sync_project_if_needed(output_root)
+  sync_root = File.join(ROOT, 'App')
+  expanded_output_root = File.expand_path(output_root)
+  return unless expanded_output_root.start_with?(sync_root)
+
+  sync_script = File.join(ROOT, 'Scripts', 'generate_project.rb')
+  return unless File.exist?(sync_script)
+
+  success = system('ruby', sync_script)
+  warn 'Warning: failed to refresh starter app project.' unless success
 end
 
 options = {
@@ -121,3 +133,5 @@ end
 puts "Generated module #{module_name}"
 puts "  Route: #{route_path}"
 puts "  Output: #{output_dir}"
+
+sync_project_if_needed(options[:output_root])

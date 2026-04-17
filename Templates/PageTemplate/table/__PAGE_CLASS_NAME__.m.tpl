@@ -1,6 +1,6 @@
 #import "__PAGE_CLASS_NAME__.h"
 
-#import <OCAppBox/OCAppBox.h>
+#import <OCAppBox.h>
 
 @interface __PAGE_CLASS_NAME__ ()
 

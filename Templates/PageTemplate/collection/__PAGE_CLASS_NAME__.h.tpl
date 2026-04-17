@@ -1,4 +1,4 @@
-#import <OCAppBox/UI/Base/OCBBaseCollectionViewController.h>
+#import <UI/Base/OCBBaseCollectionViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

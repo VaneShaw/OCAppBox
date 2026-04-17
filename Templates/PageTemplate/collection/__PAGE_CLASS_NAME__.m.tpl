@@ -1,6 +1,6 @@
 #import "__PAGE_CLASS_NAME__.h"
 
-#import <OCAppBox/OCAppBox.h>
+#import <OCAppBox.h>
 
 static NSString * const __PAGE_CLASS_NAME__CellReuseIdentifier = @"__PAGE_CLASS_NAME__Cell";
 

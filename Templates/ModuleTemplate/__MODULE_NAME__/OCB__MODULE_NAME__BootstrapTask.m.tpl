@@ -1,8 +1,8 @@
 #import "OCB__MODULE_NAME__BootstrapTask.h"
 
-#import <OCAppBox/Core/OCBAppContext.h>
-#import <OCAppBox/Core/OCBServiceRegistry.h>
-#import <OCAppBox/Infra/Log/OCBLogger.h>
+#import <Core/OCBAppContext.h>
+#import <Core/OCBServiceRegistry.h>
+#import <Infra/Log/OCBLogger.h>
 
 @implementation OCB__MODULE_NAME__BootstrapTask
 

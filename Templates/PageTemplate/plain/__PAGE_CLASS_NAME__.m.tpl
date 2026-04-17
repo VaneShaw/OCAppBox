@@ -1,6 +1,6 @@
 #import "__PAGE_CLASS_NAME__.h"
 
-#import <OCAppBox/OCAppBox.h>
+#import <OCAppBox.h>
 
 @interface __PAGE_CLASS_NAME__ ()
 
@@ -52,16 +52,16 @@
     self.primaryButton = [self actionButtonWithTitle:@"Show Toast" action:@selector(showDemoToast)];
     self.secondaryButton = [self actionButtonWithTitle:@"Toggle Empty State" action:@selector(toggleEmptyState)];
 
-    [self.view addSubview:self.stackView];
+    [self.contentView addSubview:self.stackView];
     [self.stackView addArrangedSubview:self.titleLabel];
     [self.stackView addArrangedSubview:self.detailLabel];
     [self.stackView addArrangedSubview:self.primaryButton];
     [self.stackView addArrangedSubview:self.secondaryButton];
 
     [NSLayoutConstraint activateConstraints:@[
-        [self.stackView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:32.0],
-        [self.stackView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:24.0],
-        [self.stackView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-24.0]
+        [self.stackView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor constant:32.0],
+        [self.stackView.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:24.0],
+        [self.stackView.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-24.0]
     ]];
 }
 

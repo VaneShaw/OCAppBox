@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-#import <OCAppBox/Core/OCBLaunchTask.h>
+#import <Core/OCBLaunchTask.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -2,7 +2,6 @@
 DerivedData/
 build/
 xcuserdata/
-*.xcworkspace
 *.xcuserstate
 *.swp
 Pods/

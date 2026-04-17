@@ -1,6 +1,7 @@
 #import "OCB__MODULE_NAME__ViewController.h"
 
-#import <OCAppBox/UI/Theme/OCBThemeManager.h>
+#import <UI/Theme/OCBThemeManager.h>
+#import "UIView+OCBAdditions.h"
 
 @interface OCB__MODULE_NAME__ViewController ()
 
@@ -51,17 +52,17 @@
     self.actionButton.layer.cornerRadius = 12.0;
     [self.actionButton addTarget:self action:@selector(toggleEmptyState) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.view addSubview:self.titleLabel];
-    [self.view addSubview:self.detailLabel];
-    [self.view addSubview:self.actionButton];
+    [self.contentView addSubview:self.titleLabel];
+    [self.contentView addSubview:self.detailLabel];
+    [self.contentView addSubview:self.actionButton];
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
 
-    CGFloat width = CGRectGetWidth(self.view.bounds);
-    CGFloat top = 200.0;
+    CGFloat width = self.contentView.ocb_width;
+    CGFloat top = 56.0;
     self.titleLabel.frame = CGRectMake(24.0, top, width - 48.0, 36.0);
     self.detailLabel.frame = CGRectMake(24.0, CGRectGetMaxY(self.titleLabel.frame) + 18.0, width - 48.0, 76.0);
     self.actionButton.frame = CGRectMake(32.0, CGRectGetMaxY(self.detailLabel.frame) + 28.0, width - 64.0, 52.0);

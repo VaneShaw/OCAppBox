@@ -11,7 +11,7 @@
 - 基础设施接入规范
 - 通用 UI 基座
 - 业务服务抽象
-- 示例工程和模板
+- Starter App 工程和模板
 
 ## 2. 架构原则
 
@@ -21,7 +21,7 @@
 
 依赖方向建议如下：
 
-`Foundation -> Core -> Infra / UI / Service -> Module -> Example App`
+`Foundation -> Core -> Infra / UI / Service -> Module -> App Host`
 
 ### 2.2 Objective-C 友好
 
@@ -30,14 +30,14 @@
 - 尽量减少全局单例扩散，把单例收敛到受控中心
 - 分类只补充安全和高复用能力，避免大范围方法污染
 
-### 2.3 可裁剪
+### 2.3 直接可用
 
-框架需要支持不同 App 按需接入，不要求每个项目一次性全量启用。后续发布方式建议优先走 `CocoaPods subspec`。
+仓库当前优先保证“clone 后直接开发”，而不是先做额外的发布拆包流程。
 
 ## 3. 目录规划
 
 ```text
-Sources/OCAppBox
+App
 ├── Core
 ├── Foundation
 ├── Infra
@@ -98,10 +98,19 @@ Sources/OCAppBox
 
 - `OCBNetworkClient`
 - `OCBRequest`
+- `OCBNetworkResponse`
+- `OCBNetworkError`
 - `OCBCacheCenter`
 - `OCBLogger`
 - `OCBConfigCenter`
 - `OCBKeychainStore`
+
+当前仓库中的 `Infra/Network` 已切到 `AFNetworking` 封装，但 `AFNetworking` 只停留在框架内部：
+
+- 对外继续暴露 `OCBNetworking`
+- 业务模块直接使用 `OCBRequest`
+- 返回统一的 `OCBNetworkResponse / OCBNetworkError`
+- 支持按环境管理 `baseURL`
 
 ### 3.4 UI
 
@@ -152,9 +161,10 @@ Sources/OCAppBox
 - `Message`
 - `Settings`
 
-当前仓库已经内置 `Home` 和 `Account` 两个自动注册演示模块：
+当前仓库已经内置 `Home`、`Profile` 和 `Account` 三个自动注册演示模块：
 
 - `Home`：负责首页、路由入口、权限状态和空态能力演示
+- `Profile`：负责业务模块生成后的默认页面演示
 - `Account`：负责账号登录态、用户会话和远程配置联动演示
 
 ### 3.7 Support
@@ -191,41 +201,22 @@ Sources/OCAppBox
 
 先在一个仓库里完成以下闭环：
 
-- 一个 `Example` 宿主 App
-- 一套 `Sources/OCAppBox` 源码
-- 两个演示业务模块
+- 一个根目录直开的宿主 App
+- 一套 `App` 源码
+- 三个演示业务模块
 - 本地可运行、可调试、可验证
 
-当前 `Example` 已进一步拆出一层宿主模板：
+当前 starter app 已经收敛成根目录直接可开的宿主工程：
 
-- `Host/OCBDemoAppLauncher` 负责启动装配
-- `Host/OCBDemoRouteCatalog` 负责宿主路由常量
-- `Demo/OCBDemoHomeViewController` 负责宿主首页和调试入口
+- `App/Host/OCBDemoAppLauncher` 负责启动装配
+- `App/Host/OCBDemoRouteCatalog` 负责宿主路由常量
+- `starterTabs` 负责根 `TabBar` 配置
 
-这样框架模块和宿主页之间的边界更清晰，后续替换成真实业务宿主时不需要把启动逻辑继续堆回 `AppDelegate`。
+你直接改 `Bundle Identifier + starterTabs + 业务模块页面` 就能开始开发。
 
 这个阶段先不追求过度拆包，重点是验证架构是否顺手。
 
-### 4.2 第二阶段：模块化发布
-
-在基础版稳定后，拆成 `subspec`：
-
-- `OCAppBox/Core`
-- `OCAppBox/Foundation`
-- `OCAppBox/Infra`
-- `OCAppBox/UI`
-- `OCAppBox/Service`
-- `OCAppBox/Module`
-
-当前仓库已经完成第一版 `podspec subspec` 拆分，并提供默认聚合层 `OCAppBox/Umbrella`。
-
-优点：
-
-- 业务可按需接入
-- 编译边界更清晰
-- 更适合多项目复用
-
-### 4.3 第三阶段：模板化提效
+### 4.2 第二阶段：模板化提效
 
 如果你的目标是“快速开发 App”，模板化能力非常关键。
 
@@ -266,13 +257,13 @@ ruby Scripts/generate_page.rb Home Feed --type table
 当前仓库也已提供最小回归校验脚本：
 
 ```bash
-bash Scripts/validate_example.sh
+bash Scripts/validate_project.sh
 ```
 
 会覆盖：
 
 - CocoaPods 依赖安装
-- Example 工程编译
+- 根目录宿主工程编译
 - `AppContext / ModuleManager / Router / ServiceRegistry / CacheCenter` 最小单测
 - 模块 / 服务脚手架 smoke test
 
@@ -338,18 +329,17 @@ bash Scripts/validate_example.sh
 
 ### M5：业务验证
 
-- 接入两个真实业务模块
+- 接入三个真实业务模块
 - 跑通登录、列表、详情、设置等典型流程
 - 修正模块边界和依赖关系
 
-当前基础版已经完成 `Home + Account` 两个演示模块接入，示例工程通过 `autoRegisterModules` 即可完成业务层验证。
+当前基础版已经完成 `Home + Profile + Account` 三个演示模块接入，示例工程通过 `autoRegisterModules` 即可完成业务层验证。
 
-### M6：发布复用
+### M6：复用整理
 
-- `podspec`
-- `subspec`
 - 接入文档
 - 模块模板工具
+- 目录和发布方式再评估
 
 ## 7. 我建议你优先做的最小闭环
 

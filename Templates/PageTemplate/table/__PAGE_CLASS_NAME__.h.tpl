@@ -1,4 +1,4 @@
-#import <OCAppBox/UI/Base/OCBBaseTableViewController.h>
+#import <UI/Base/OCBBaseTableViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

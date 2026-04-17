@@ -1,8 +1,8 @@
 #import "OCB__MODULE_NAME__Module.h"
 
-#import <OCAppBox/Core/OCBAppContext.h>
-#import <OCAppBox/Core/OCBAutoRegister.h>
-#import <OCAppBox/Core/OCBRouter.h>
+#import <Core/OCBAppContext.h>
+#import <Core/OCBAutoRegister.h>
+#import <Core/OCBRouter.h>
 #import "OCB__MODULE_NAME__BootstrapTask.h"
 #import "UI/OCB__MODULE_NAME__ViewController.h"
 

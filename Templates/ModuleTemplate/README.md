@@ -5,7 +5,7 @@
 生成器会基于这些模板产出一个新的 Objective-C 业务模块，默认目录结构如下：
 
 ```text
-Sources/OCAppBox/Module/<ModuleName>
+App/Module/<ModuleName>
 ├── OCB<ModuleName>BootstrapTask.h
 ├── OCB<ModuleName>BootstrapTask.m
 ├── OCB<ModuleName>Module.h

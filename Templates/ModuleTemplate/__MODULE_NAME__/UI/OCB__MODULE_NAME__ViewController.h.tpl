@@ -1,4 +1,4 @@
-#import <OCAppBox/UI/Base/OCBBaseViewController.h>
+#import <UI/Base/OCBBaseViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
