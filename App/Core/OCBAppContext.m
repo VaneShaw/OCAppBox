@@ -2,6 +2,8 @@
 
 #import "OCBAutoRegister.h"
 #import "OCBCacheCenter.h"
+#import "OCBConfigCenter.h"
+#import "OCBKeychainStore.h"
 #import "OCBAuthService.h"
 #import "OCBLogger.h"
 #import "OCBModuleManager.h"
@@ -46,6 +48,8 @@
 - (void)registerBuiltinServices
 {
     id<OCBLogging> logger = [OCBLogger sharedLogger];
+    id<OCBConfigProviding> configCenter = [[OCBConfigCenter alloc] init];
+    id<OCBKeychainStoring> keychainStore = [[OCBKeychainStore alloc] init];
     id<OCBStorageProviding> storage = [[OCBCacheCenter alloc] init];
     id<OCBNetworking> network = [[OCBNetworkClient alloc] initWithBaseURL:nil];
     id<OCBThemeProviding> theme = [OCBThemeManager sharedManager];
@@ -59,6 +63,8 @@
                                                                                                            logger:logger];
 
     [self.serviceRegistry registerService:logger forProtocol:@protocol(OCBLogging)];
+    [self.serviceRegistry registerService:configCenter forProtocol:@protocol(OCBConfigProviding)];
+    [self.serviceRegistry registerService:keychainStore forProtocol:@protocol(OCBKeychainStoring)];
     [self.serviceRegistry registerService:storage forProtocol:@protocol(OCBStorageProviding)];
     [self.serviceRegistry registerService:network forProtocol:@protocol(OCBNetworking)];
     [self.serviceRegistry registerService:theme forProtocol:@protocol(OCBThemeProviding)];

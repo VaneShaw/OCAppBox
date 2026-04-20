@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "58A389F3BFDEF6D22CC72968"
+               BlueprintIdentifier = "A83EAFA15DC69B5605D023A9"
                BuildableName = "OCAppBox.app"
                BlueprintName = "OCAppBox"
                ReferencedContainer = "container:OCAppBox.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DBDD870B0A9C374730BED9E"
+               BlueprintIdentifier = "25B4EB6AEC38471ABFA261C4"
                BuildableName = "OCAppBoxTests.xctest"
                BlueprintName = "OCAppBoxTests"
                ReferencedContainer = "container:OCAppBox.xcodeproj">
@@ -44,7 +44,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58A389F3BFDEF6D22CC72968"
+            BlueprintIdentifier = "A83EAFA15DC69B5605D023A9"
             BuildableName = "OCAppBox.app"
             BlueprintName = "OCAppBox"
             ReferencedContainer = "container:OCAppBox.xcodeproj">
@@ -55,7 +55,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DBDD870B0A9C374730BED9E"
+               BlueprintIdentifier = "25B4EB6AEC38471ABFA261C4"
                BuildableName = "OCAppBoxTests.xctest"
                BlueprintName = "OCAppBoxTests"
                ReferencedContainer = "container:OCAppBox.xcodeproj">
@@ -77,7 +77,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58A389F3BFDEF6D22CC72968"
+            BlueprintIdentifier = "A83EAFA15DC69B5605D023A9"
             BuildableName = "OCAppBox.app"
             BlueprintName = "OCAppBox"
             ReferencedContainer = "container:OCAppBox.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "58A389F3BFDEF6D22CC72968"
+            BlueprintIdentifier = "A83EAFA15DC69B5605D023A9"
             BuildableName = "OCAppBox.app"
             BlueprintName = "OCAppBox"
             ReferencedContainer = "container:OCAppBox.xcodeproj">

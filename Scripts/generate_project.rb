@@ -91,6 +91,9 @@ ui_kit_ref = frameworks_group.new_file('System/Library/Frameworks/UIKit.framewor
 app_target.frameworks_build_phase.add_file_reference(ui_kit_ref, true)
 test_target.frameworks_build_phase.add_file_reference(ui_kit_ref, true)
 
+security_ref = frameworks_group.new_file('System/Library/Frameworks/Security.framework')
+app_target.frameworks_build_phase.add_file_reference(security_ref, true)
+
 project.save
 
 scheme = Xcodeproj::XCScheme.new

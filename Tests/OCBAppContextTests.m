@@ -71,6 +71,8 @@ static NSInteger OCBAppContextExportedServiceFactoryCallCount = 0;
     XCTAssertTrue([appContext.serviceRegistry containsServiceForProtocol:@protocol(OCBAuthenticating)]);
     XCTAssertTrue([appContext.serviceRegistry containsServiceForProtocol:@protocol(OCBPermissionProviding)]);
     XCTAssertTrue([appContext.serviceRegistry containsServiceForProtocol:@protocol(OCBRemoteConfigProviding)]);
+    XCTAssertTrue([appContext.serviceRegistry containsServiceForProtocol:@protocol(OCBConfigProviding)]);
+    XCTAssertTrue([appContext.serviceRegistry containsServiceForProtocol:@protocol(OCBKeychainStoring)]);
 }
 
 - (void)testInitRegistersExportedServiceUsingAppContextFactory

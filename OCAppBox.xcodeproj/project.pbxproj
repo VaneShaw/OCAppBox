@@ -7,706 +7,780 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1483ABDAD496735806475088 /* NSArray+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E5CED597B17540274FC546 /* NSArray+OCBAdditions.m */; };
-		1945AC7631A7161ACF35B72F /* UIView+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9454AF880D8B54F902D2471C /* UIView+OCBAdditions.m */; };
-		1E95885D24628850F8E263F6 /* OCBProfileBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6797561DD6551EEC304F97A2 /* OCBProfileBootstrapTask.m */; };
-		2116817DB8EFD1877835B331 /* OCBBaseAPIServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C026DB18189A8BBC516F155B /* OCBBaseAPIServiceTests.m */; };
-		2197162BD61091F1CB143597 /* OCBAppContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51ED08C5070C44C5F6FB3DF7 /* OCBAppContextTests.m */; };
-		2347D4CC4776F04456D1B6A9 /* OCBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E56CCDF928A962FB4B2BED3 /* OCBTabBarController.m */; };
-		2967534655A28E8C6A3E4B82 /* OCBLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2155FAEDF863C9CC0D321447 /* OCBLogger.m */; };
-		2A031F7A373F4E58FB8B722C /* OCBModuleManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95D7BB42B5A59CD3EEDA2E /* OCBModuleManagerTests.m */; };
-		2CE5C316324CDD52E89A2012 /* OCBNetworkResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D966FBC0E379CA4A77725400 /* OCBNetworkResponseTests.m */; };
-		30836CA248BCA49954BE6197 /* Pods_OCAppBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF0E9C02EFE16E77B4AE31E /* Pods_OCAppBox.framework */; };
-		31050F1E395A7D23F8B3C453 /* OCBStarterAppConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D494EE48817954375EEAD469 /* OCBStarterAppConfigurationTests.m */; };
-		34F1FC44BC6949FE417ED046 /* OCBTabBarItemDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D6F809106FD1F21613E70 /* OCBTabBarItemDescriptor.m */; };
-		36387BAA66B12D23FFE6FB65 /* OCBAccountBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E362094533C44AA74C20E8 /* OCBAccountBootstrapTask.m */; };
-		3A6704CAE205AC7387B3D2CB /* NSString+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEEF32E544A634AE6CD7412 /* NSString+OCBAdditions.m */; };
-		40E412986C8A8A0E9A0435F6 /* OCBAppMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 219C779B674D09FAB42269B9 /* OCBAppMetadata.m */; };
-		451E39A5D3CB7CFEFFDAE43C /* OCBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B119A11A7B1BAA8DBAF84FFF /* OCBModuleManager.m */; };
-		452D9618DAFBDBC8D25C6CE1 /* OCBRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC963AA88A624FA6487FDCF /* OCBRouter.m */; };
-		460231030202088A1C96C494 /* OCBDemoRouteCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 953791D844C1F98F1E1C0FB7 /* OCBDemoRouteCatalog.m */; };
-		4AD2B28CCEC2AEDEBCF281B1 /* OCBServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 772EE94DF7A45A7C8E7768BB /* OCBServiceRegistry.m */; };
-		4B1FF66B4AC5B3CD03AEDCDE /* OCBDebugPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36094457CC3ADCF261EEDBFD /* OCBDebugPanelViewController.m */; };
-		550F1BC6573591630BFDEC12 /* OCBNetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7FD12D9DE86CC47838088 /* OCBNetworkError.m */; };
-		563AF9B2672300EE582AC588 /* OCBNetworkClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF732CA4D47DCC63A06B3CF /* OCBNetworkClientTests.m */; };
-		5B814068F025087CDD9E871C /* OCBAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A456A7153B8131B3DC171131 /* OCBAppContext.m */; };
-		5C569F79572B9213F792E513 /* OCBProfileModule.m in Sources */ = {isa = PBXBuildFile; fileRef = AA58C12775ABAEC0D42BA52B /* OCBProfileModule.m */; };
-		5CB6FDF89BBA4B106A5CF399 /* OCBBaseAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 810F67AF6734A110E6696CF9 /* OCBBaseAPIService.m */; };
-		5CF5769B2131A35401F44972 /* OCBUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1AF39012D5BDD8D4D04F1E /* OCBUserSession.m */; };
-		5EA0136218EC34C6DF96A8EB /* OCBFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BAA4E96561F475251EC057 /* OCBFoundationTests.m */; };
-		64B7D14721E47FABA7FB0943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 983B765D2B9DCB3ED20E79A2 /* LaunchScreen.storyboard */; };
-		66996FB589FD807F9298372A /* OCBDebugPanelModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E497DF6E9AFC4618DFD6F98C /* OCBDebugPanelModule.m */; };
-		67CE6847475A4B62B00FAE8F /* OCBCacheCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 021AA4A43BA74ABB9C3194E3 /* OCBCacheCenterTests.m */; };
-		6A63E4A2D69C162773928496 /* OCBNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7735A0EEDC346F96E43DB8 /* OCBNetworkClient.m */; };
-		6DC91A0EC7D638CFD414543D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6953DC05C16DF14B7BED47 /* Foundation.framework */; };
-		75556F3170F35B63F94ED780 /* OCBNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D8543FC162031B3D61A0D2 /* OCBNavController.m */; };
-		76DD9FB04F2CBABF076659AF /* Pods_OCAppBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2015DFD39DE16A4BD07A43 /* Pods_OCAppBoxTests.framework */; };
-		7ABBF0B06F5135876D68ABB4 /* NSDictionary+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE71DB59A815B2FF10B4193E /* NSDictionary+OCBAdditions.m */; };
-		7F29C6840A705E46986145F5 /* OCBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8343DF8702B9EC0E5145B1 /* OCBAccountViewController.m */; };
-		8018BDE405E329786FDC72DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5924EC5DF4B5B2AED5A584CE /* UIKit.framework */; };
-		83DE5C8A6B7F9C4471B1ABAF /* OCBUIBaseControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B767D59016D59C831C49A14C /* OCBUIBaseControllerTests.m */; };
-		87B70931C42B7D3AB8CE2C56 /* OCBAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = 267AA07964CF771639E7B990 /* OCBAuthService.m */; };
-		87EB15331A025B0C1EA85C0E /* OCBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B5976FBDD1F4E2FA13A5B /* OCBRequest.m */; };
-		88C3D6E0C2E7734A9F5CBB5E /* OCBToast.m in Sources */ = {isa = PBXBuildFile; fileRef = F288BBA3C2ADA0C7B12DAB44 /* OCBToast.m */; };
-		893A584E280221F2D03BC1E6 /* OCBAccountModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6F80ED3194EC9B87D30FA6 /* OCBAccountModule.m */; };
-		95201BF919E3F59532417FA5 /* OCBHomeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 664BC4841BEABCE65595B111 /* OCBHomeModule.m */; };
-		9A62989EBAA3DDE1ED5C8E94 /* OCBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFF43D61CB17820F208FAE /* OCBBaseViewController.m */; };
-		9F3FEF2B09480E1A3A9D27CF /* OCBNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C2461BBBF455684181037912 /* OCBNetworkResponse.m */; };
-		A0724C370013266F98B55F81 /* OCBRemoteConfigService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AB97475FBE3DA77CB3D2EC /* OCBRemoteConfigService.m */; };
-		A13FA34E518993CEC4AE6D64 /* OCBEmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D085662CA2E628EDF97E6 /* OCBEmptyStateView.m */; };
-		A1840C70F7721A47328C4E4D /* OCBStarterAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B25B95C6768C79346E5D95CB /* OCBStarterAppConfiguration.m */; };
-		A1F81130E8F1A6C862D4A338 /* OCBHomeBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD0038EAFFB202B50038254 /* OCBHomeBootstrapTask.m */; };
-		ABB6245358A4ED086C032FA7 /* OCBAPIResponseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB647009C5E82E1B3E8ECD8 /* OCBAPIResponseMapper.m */; };
-		AF467EB50E42F7854F2631AC /* UIColor+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B45AAC2D2170B8269C8CC /* UIColor+OCBAdditions.m */; };
-		B1FE492430DCAE78283BC710 /* OCBBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1756F73366A928FCF3EA3AA /* OCBBaseCollectionViewController.m */; };
-		B586EFB619115B639893D578 /* OCBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55F28D4220D60833D818EA9 /* OCBProfileViewController.m */; };
-		B9CAFCD3EF4BA1CD352CDC62 /* OCBPermissionService.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2CD8999A2EA52B4CEF14E1 /* OCBPermissionService.m */; };
-		D0B6C18BEC4CFC7881939778 /* OCBDemoAppLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = E56757746D30DC954B05E0B6 /* OCBDemoAppLauncher.m */; };
-		D26D425B861510E7D0E80B8D /* OCBDemoAppLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E39E46AB1DF367F5FE8AB7E3 /* OCBDemoAppLauncherTests.m */; };
-		D63605802746FFD09EE952A5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5924EC5DF4B5B2AED5A584CE /* UIKit.framework */; };
-		D6D8D38F0575E3EC87D5053A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6953DC05C16DF14B7BED47 /* Foundation.framework */; };
-		D79F5DF902D441FBB6C6B99A /* OCBAutoRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 6624B0CB822FB11F5D78DB55 /* OCBAutoRegister.m */; };
-		D952C50DF4CBD2E51F1D122A /* OCBThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B1A199D1473DE368A6939B /* OCBThemeManager.m */; };
-		D9FC26D74BBBB2B8FEF32D79 /* OCBCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EEA8052DADB0F9575CEDA4 /* OCBCacheCenter.m */; };
-		DD996F3F215AB65CFEFB60C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E5483A9B9757B99E94C96 /* main.m */; };
-		E4E8910F7E59E01963FFDF4C /* OCBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7936917DC756FEF79173DCB6 /* OCBBaseTableViewController.m */; };
-		E88304261D8E52622A249AD8 /* OCBRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402A00F000387D5CB4B40D3 /* OCBRouterTests.m */; };
-		E892220188A5486EE82DA2C4 /* OCBUserSessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5867923CE710928B3A55F61E /* OCBUserSessionService.m */; };
-		EF06428B4799F42437439BE2 /* OCBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E948F49D447F1AEF9917924 /* OCBLoadingView.m */; };
-		F99337B28295D1E352882E2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 027FDB83B153D673E50E8214 /* AppDelegate.m */; };
-		F9AFA8A7E4C8B82C265AB2DA /* OCBServiceRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1F0EAFCDD3F884C09F05 /* OCBServiceRegistryTests.m */; };
-		FD070430123F975A03E361E6 /* OCBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC23907BC87F8EFFAE95A8C0 /* OCBHomeViewController.m */; };
+		0446E5D05094D4CCE01D84FD /* OCBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E980D670DA418DB6590D0D8 /* OCBLoadingView.m */; };
+		0C095832362D16490D8EED09 /* OCBKeychainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B35B685A3191882B273CBBE /* OCBKeychainStore.m */; };
+		0D21AB8CBBD800D5A3FB6B08 /* Pods_OCAppBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0ED6A80D5E691670E19225B /* Pods_OCAppBox.framework */; };
+		0E6FF7B646A19819DF6C9AB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2334F40B2E028627023209 /* AppDelegate.m */; };
+		0F55345E4D97455A3359D6ED /* OCBStarterAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = E615B181C6DFCE8C4EAE487D /* OCBStarterAppConfiguration.m */; };
+		13078E2017D893E842A36861 /* OCBFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A9BA6AD441439F53DB4123 /* OCBFoundationTests.m */; };
+		1313F8CCBF26DB3FECA01F3E /* OCBModuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C3065B8F5753F286FD32F /* OCBModuleManager.m */; };
+		1321E8F58C56B4F7C30ED406 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F274CCA5F467811678EF6D8 /* UIKit.framework */; };
+		138FAFB812ACACCA87EFC9D1 /* OCBThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F15ABFF04C72C0FC12AD6 /* OCBThemeManager.m */; };
+		169B44C4B611CF1E345E4E7B /* OCBBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 439DEB6F099D63612411F106 /* OCBBaseModel.m */; };
+		16BBA247A5DD7842E4600C92 /* OCBLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DDE31B0F99D72BD514705D /* OCBLogger.m */; };
+		171650AC3450FD9DF4110278 /* OCBNetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = DC529315A5249BAFB484B587 /* OCBNetworkError.m */; };
+		1E3DB05F208788331DBE7142 /* OCBAccountBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B09B9F1779868B4E33F140 /* OCBAccountBootstrapTask.m */; };
+		24B6B7A1C54F58B5FC9CBFDD /* OCBDemoAppLauncherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD985664ECE3833CA016191B /* OCBDemoAppLauncherTests.m */; };
+		24BFF93DC321096A74621B9B /* OCBAccountModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3103C191917D52D8B58D5285 /* OCBAccountModule.m */; };
+		26A56935BCB8326B117367B8 /* OCBNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A21DE8B8C43D3CFB2EFA222F /* OCBNavController.m */; };
+		2CAC43F75405D135D8728BC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60571BD0677CB3299398E0B /* Foundation.framework */; };
+		2E4A135D2ECAC02A5FC5B375 /* OCBAPIResponseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2EFD3821DEC4BA289BB591 /* OCBAPIResponseMapper.m */; };
+		2E8F2D879B25052CA8BB3D41 /* OCBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6B620A50D1ACE61DDC037B /* OCBRequest.m */; };
+		3BD4A6F20DAD313490BD2DCE /* OCBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F230B5DF4F91B7E6DC3946 /* OCBHomeViewController.m */; };
+		3FB8169B800E18D598E6DD61 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14094BDFC8360C8832BDDBD /* Security.framework */; };
+		40822D802C5631F1C574B343 /* OCBRemoteConfigService.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C71710B12976FD68487FB8 /* OCBRemoteConfigService.m */; };
+		427830C2C0E8071347C7EAAA /* NSArray+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B19A825051C7454BA21882 /* NSArray+OCBAdditions.m */; };
+		42F5D41828C12763BEA3DB29 /* OCBBaseModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7290F59F1A6792F99D2FB648 /* OCBBaseModelTests.m */; };
+		46277EE5C64D5B1C0330D1DA /* OCBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C95DAE625C6AB364BA6073D /* OCBAccountViewController.m */; };
+		48DDEE895B77844C926CCB3D /* OCBHomeModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C63BD59084DCC7822DABEA0B /* OCBHomeModule.m */; };
+		4D9CC4E35E6F816B527D6AF9 /* OCBCacheCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 448786E54E0925A9D41E8B27 /* OCBCacheCenterTests.m */; };
+		4DAEF880ECE97A03042B95C7 /* OCBConfigCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A762A658F5534FF7B2B2F2D3 /* OCBConfigCenterTests.m */; };
+		4E3767F6FACC13C72F72DF84 /* OCBKeychainStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F9E219D09E6798FB995AD1 /* OCBKeychainStoreTests.m */; };
+		4F00951F073B40CFADCBC25D /* OCBUIBaseControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8401B17EC8B32395CF0B047A /* OCBUIBaseControllerTests.m */; };
+		509D93479F2E6662D274A5CC /* OCBUserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE7E0937436E896664DF567 /* OCBUserSession.m */; };
+		51D09C6685C20DBA19E769C2 /* OCBUserSessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D07231A8D44BA1FE25AA332 /* OCBUserSessionService.m */; };
+		532A890E4F944A940DD74B51 /* OCBEmptyStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0926CAF071C2285194CC4BCC /* OCBEmptyStateView.m */; };
+		55F5315201A978EE3C5211B2 /* OCBNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58FECB8A62C066E7975861 /* OCBNetworkClient.m */; };
+		579D884DDE1ADF0C4F791C06 /* OCBPermissionService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B41E5539369D0E4B3557D5C /* OCBPermissionService.m */; };
+		5A6A92B5DF2936CF3474458D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60571BD0677CB3299398E0B /* Foundation.framework */; };
+		5CF96A69D0A36422C34B65B8 /* OCBRouterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29098DE1B7915817AE390743 /* OCBRouterTests.m */; };
+		5D051C35F1B7E1FC87B22A76 /* OCBRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D8946CB21631EA76ACBE8E /* OCBRouter.m */; };
+		684ABBF292CB61EDE228C0FD /* OCBAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 618C844FEA8DFACAC2C1D9B9 /* OCBAppContext.m */; };
+		6867863B2952DDFD16A4E8F9 /* OCBDebugPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDBAA993751F651FB744797 /* OCBDebugPanelViewController.m */; };
+		68C56C885934AC6D2ACECA77 /* OCBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F2A687C7B4073C622615DA /* OCBProfileViewController.m */; };
+		722FACEF76AA18F8B41CCA45 /* OCBServiceRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E95DE3388B35299B7080D20F /* OCBServiceRegistryTests.m */; };
+		75EFD499299346A45E851EB2 /* OCBBaseAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D11F360B984D4808F0AB3B /* OCBBaseAPIService.m */; };
+		76ACA68296F898B4D5C805B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE080B73F18AD39F4A10610 /* LaunchScreen.storyboard */; };
+		77429FF25DD42B997325F6A8 /* OCBHomeBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED533F0C6762A58D31CCCC1 /* OCBHomeBootstrapTask.m */; };
+		79EF5D385F45200D58A0B643 /* OCBAppMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBB77D1A2224EA77FCF8DB /* OCBAppMetadata.m */; };
+		7B23B3FD874033054AFB3671 /* OCBBaseAPIServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7300351C25BA22B92BE2E /* OCBBaseAPIServiceTests.m */; };
+		7DFD19A148CF2FEAB6CDF1FE /* OCBAutoRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C3C7FC922C07CB59646EE3 /* OCBAutoRegister.m */; };
+		848B56EC9E881C62E5B9385C /* NSDictionary+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9978DD1F4B52ECFCAD68F8 /* NSDictionary+OCBAdditions.m */; };
+		84EEBC0B938B0A2C26FF23D5 /* OCBBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A57017F285831B9E1EAAAF /* OCBBaseCollectionViewController.m */; };
+		8545C0521EE69A84D98641A7 /* OCBDemoRouteCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C415DA9017F6AB91D95036E /* OCBDemoRouteCatalog.m */; };
+		85724EF8E6B4F736DE97646A /* OCBAuthService.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1F86C2B42E7C71EC7A0DF0 /* OCBAuthService.m */; };
+		8B5D9BAC4F1D7837C47875EC /* OCBConfigCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D97A1A2B1E532ED679A0A91F /* OCBConfigCenter.m */; };
+		8F99A31475A4F01C1819B129 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F274CCA5F467811678EF6D8 /* UIKit.framework */; };
+		929C9A42FF89684D51C34389 /* OCBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0149F0C4B559BDD5ADACBA16 /* OCBBaseViewController.m */; };
+		9A3C9B6FD5CF769041CA31E8 /* OCBServiceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BB3E494421A95CC21088DCCB /* OCBServiceRegistry.m */; };
+		9B179DCE75A26BCCBE89BC0A /* UIView+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5DDFB4FDD0E1970F78FEEB /* UIView+OCBAdditions.m */; };
+		A18643732D63F261B927421C /* OCBDebugPanelModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE72C7A862A5A3908B13B5 /* OCBDebugPanelModule.m */; };
+		A1C205BBC4E9CAFE3E9D13B1 /* OCBToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 41492BC7766E690A42AFC6D7 /* OCBToast.m */; };
+		AD68ABBBD60364D0230ED347 /* OCBProfileModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D66E4FB85EB683A673B53E76 /* OCBProfileModule.m */; };
+		ADCF97B48C497EA3D5D4F65B /* OCBNetworkResponseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E20BD4406F44A1BEB9E3B2 /* OCBNetworkResponseTests.m */; };
+		BD1A874EB28B0F2591F22B8D /* OCBAppContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC60FBD05A8A26B9FF6300 /* OCBAppContextTests.m */; };
+		C507C5248A85AEAD6C722362 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 476BFB50406F8488B0C6B642 /* main.m */; };
+		C8B35806ACE5D9C2A2FA928C /* OCBStarterAppConfigurationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE8C69266F3431F7052B545 /* OCBStarterAppConfigurationTests.m */; };
+		CBDDFD53C0830D3A37A0EC12 /* OCBNetworkResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5167855A649B8F84C509322A /* OCBNetworkResponse.m */; };
+		CD04847AD9EB21A3D06A5C0E /* OCBCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D34916F03F12E200879887 /* OCBCacheCenter.m */; };
+		D2B0B611A7CFE53D0CAE6339 /* OCBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9B3C312539CC4DB61741B /* OCBBaseTableViewController.m */; };
+		DB9F0AA466EEA2B89B043A14 /* OCBDemoAppLauncher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C61CE83DF816A8BC30F28 /* OCBDemoAppLauncher.m */; };
+		DD0C3E7EE6CDACE0E1A649FD /* OCBNetworkClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA8748C0D44AF7F066097F3 /* OCBNetworkClientTests.m */; };
+		DD577E3EAD71634477A1E1A8 /* OCBProfileBootstrapTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FACE954EF7DE93A1E5F2546 /* OCBProfileBootstrapTask.m */; };
+		E5FBBE2D5C812F7B53C87283 /* OCBTabBarItemDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFE6E674D52E7F6401BF6FF /* OCBTabBarItemDescriptor.m */; };
+		E5FE96927B938E74FBB8D1A8 /* OCBModuleManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4B7D5100428B6491AF05E8 /* OCBModuleManagerTests.m */; };
+		E8AA416DF5438F19A3039A2E /* Pods_OCAppBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A982AE8DCC81D6B9977B3DA8 /* Pods_OCAppBoxTests.framework */; };
+		EB2AD1A32BA3D0A9DEC4C0C3 /* OCBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A60E5E92B572FD78C3BE2EF2 /* OCBTabBarController.m */; };
+		EF53B0E4AA5DAF29BF73D666 /* NSString+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9797E1C0CEC85B28DC5F7972 /* NSString+OCBAdditions.m */; };
+		FA9024363AC671C09053907C /* UIColor+OCBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8C7DC76832EEF1E45D82B1 /* UIColor+OCBAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D28A95F0C206DA81CC6918F3 /* PBXContainerItemProxy */ = {
+		27C0281ACE5DB1D928BF84ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 74E75C3DB88BB6F3957976B1 /* Project object */;
+			containerPortal = 7B27D4D9454229034F5F8485 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 58A389F3BFDEF6D22CC72968;
+			remoteGlobalIDString = A83EAFA15DC69B5605D023A9;
 			remoteInfo = OCAppBox;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021AA4A43BA74ABB9C3194E3 /* OCBCacheCenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBCacheCenterTests.m; sourceTree = "<group>"; };
-		027FDB83B153D673E50E8214 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		03EFB2CC59795B2DE24F0ED9 /* OCBLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLogger.h; sourceTree = "<group>"; };
-		041104BEC4A04C43B982D7E6 /* OCBLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLoadingView.h; sourceTree = "<group>"; };
-		05BEC0FB601B5A275F783F3D /* OCBDebugPanelModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDebugPanelModule.h; sourceTree = "<group>"; };
-		0A3CF063A066CCD4F9B86669 /* UIColor+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+OCBAdditions.h"; sourceTree = "<group>"; };
-		0C2E5483A9B9757B99E94C96 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		127B2E66CE89020AC5CDE172 /* OCBAccountModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountModule.h; sourceTree = "<group>"; };
-		1932AC1703AD4B43CD3D4582 /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1ADC8B95412B47C025EDC4C7 /* Pods-OCAppBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBoxTests.release.xcconfig"; path = "Target Support Files/Pods-OCAppBoxTests/Pods-OCAppBoxTests.release.xcconfig"; sourceTree = "<group>"; };
-		1CC6282C7A26DA896A108263 /* OCBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRequest.h; sourceTree = "<group>"; };
-		1DE74CCE38C18FB001970B0D /* OCBDemoAppLauncher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDemoAppLauncher.h; sourceTree = "<group>"; };
-		1E948F49D447F1AEF9917924 /* OCBLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBLoadingView.m; sourceTree = "<group>"; };
-		20BAA4E96561F475251EC057 /* OCBFoundationTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBFoundationTests.m; sourceTree = "<group>"; };
-		2155FAEDF863C9CC0D321447 /* OCBLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBLogger.m; sourceTree = "<group>"; };
-		219C779B674D09FAB42269B9 /* OCBAppMetadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppMetadata.m; sourceTree = "<group>"; };
-		233E8F784E211D8BB3621D81 /* OCBHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeViewController.h; sourceTree = "<group>"; };
-		267AA07964CF771639E7B990 /* OCBAuthService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAuthService.m; sourceTree = "<group>"; };
-		27BABDDDF1341B3F02492CC8 /* OCAppBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCAppBox.h; sourceTree = "<group>"; };
-		28D8543FC162031B3D61A0D2 /* OCBNavController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNavController.m; sourceTree = "<group>"; };
-		2A8343DF8702B9EC0E5145B1 /* OCBAccountViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountViewController.m; sourceTree = "<group>"; };
-		2B66ECE687D9BE718AE4E8FF /* OCBEmptyStateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBEmptyStateView.h; sourceTree = "<group>"; };
-		2F8125D77CEE09FD2C0F6EB9 /* OCBRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRouter.h; sourceTree = "<group>"; };
-		31152E9B08F1BA15D8F7FD32 /* OCBUserSessionService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBUserSessionService.h; sourceTree = "<group>"; };
-		31E5CED597B17540274FC546 /* NSArray+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OCBAdditions.m"; sourceTree = "<group>"; };
-		3272388DC52E2449BE6020D0 /* OCBModuleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBModuleManager.h; sourceTree = "<group>"; };
-		331AC0C9DD8E86C764E68F42 /* OCBRemoteConfigService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRemoteConfigService.h; sourceTree = "<group>"; };
-		333B9F4EB8AA252E677CFF14 /* NSString+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+OCBAdditions.h"; sourceTree = "<group>"; };
-		35EEA8052DADB0F9575CEDA4 /* OCBCacheCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBCacheCenter.m; sourceTree = "<group>"; };
-		36094457CC3ADCF261EEDBFD /* OCBDebugPanelViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDebugPanelViewController.m; sourceTree = "<group>"; };
-		3693427707F02C57382AB515 /* OCBProfileViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileViewController.h; sourceTree = "<group>"; };
-		36A57C6DE2D1ADA6CAAF8364 /* OCBNetworkError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkError.h; sourceTree = "<group>"; };
-		3CD0038EAFFB202B50038254 /* OCBHomeBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeBootstrapTask.m; sourceTree = "<group>"; };
-		3EEEF32E544A634AE6CD7412 /* NSString+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+OCBAdditions.m"; sourceTree = "<group>"; };
-		3F0B45AAC2D2170B8269C8CC /* UIColor+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCBAdditions.m"; sourceTree = "<group>"; };
-		3F1104AC9863722167A46EA4 /* OCBServiceRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBServiceRegistry.h; sourceTree = "<group>"; };
-		3F7E1F0EAFCDD3F884C09F05 /* OCBServiceRegistryTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBServiceRegistryTests.m; sourceTree = "<group>"; };
-		4373806910F7CD6DF85285BF /* OCBBaseAPIService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseAPIService.h; sourceTree = "<group>"; };
-		47AE1FB93FAA6C92ECC80E01 /* OCBAccountViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountViewController.h; sourceTree = "<group>"; };
-		51ED08C5070C44C5F6FB3DF7 /* OCBAppContextTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppContextTests.m; sourceTree = "<group>"; };
-		52F0FD66AECD9D16FE88918C /* OCBAppMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAppMetadata.h; sourceTree = "<group>"; };
-		5770DE791AA0C27C8C0A5A70 /* OCBHomeBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeBootstrapTask.h; sourceTree = "<group>"; };
-		5867923CE710928B3A55F61E /* OCBUserSessionService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUserSessionService.m; sourceTree = "<group>"; };
-		5924EC5DF4B5B2AED5A584CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = "<group>"; };
-		59AB97475FBE3DA77CB3D2EC /* OCBRemoteConfigService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRemoteConfigService.m; sourceTree = "<group>"; };
-		5A8D6F809106FD1F21613E70 /* OCBTabBarItemDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBTabBarItemDescriptor.m; sourceTree = "<group>"; };
-		5C62512A9D17DF5E63161761 /* OCAppBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCAppBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E6953DC05C16DF14B7BED47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5E6D085662CA2E628EDF97E6 /* OCBEmptyStateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBEmptyStateView.m; sourceTree = "<group>"; };
-		64CBB9D742D6A28B1FB5E215 /* OCBAutoRegister.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAutoRegister.h; sourceTree = "<group>"; };
-		6624B0CB822FB11F5D78DB55 /* OCBAutoRegister.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAutoRegister.m; sourceTree = "<group>"; };
-		664BC4841BEABCE65595B111 /* OCBHomeModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeModule.m; sourceTree = "<group>"; };
-		666655AD0C84D92CBBB832D2 /* OCBAuthService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAuthService.h; sourceTree = "<group>"; };
-		666E074D7BB29EE97672E476 /* UIView+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+OCBAdditions.h"; sourceTree = "<group>"; };
-		6797561DD6551EEC304F97A2 /* OCBProfileBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileBootstrapTask.m; sourceTree = "<group>"; };
-		6841D70BB6643F6503ED4334 /* OCBNavController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNavController.h; sourceTree = "<group>"; };
-		68508CF0BD503B9E75F6E9A1 /* OCBBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseViewController.h; sourceTree = "<group>"; };
-		6AC963AA88A624FA6487FDCF /* OCBRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRouter.m; sourceTree = "<group>"; };
-		6E56CCDF928A962FB4B2BED3 /* OCBTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBTabBarController.m; sourceTree = "<group>"; };
-		70EF1C631A999780FAE17A2F /* NSDictionary+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OCBAdditions.h"; sourceTree = "<group>"; };
-		71E3553EDD415CAB4B116B60 /* OCBNetworkResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkResponse.h; sourceTree = "<group>"; };
-		73A391062211189F1565B42C /* OCBHomeModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeModule.h; sourceTree = "<group>"; };
-		7404F20E26001977658CAEF4 /* OCBAppContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAppContext.h; sourceTree = "<group>"; };
-		7449E2FD53527D0F49FB0E51 /* OCBAPIResponseMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAPIResponseMapper.h; sourceTree = "<group>"; };
-		772EE94DF7A45A7C8E7768BB /* OCBServiceRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBServiceRegistry.m; sourceTree = "<group>"; };
-		7936917DC756FEF79173DCB6 /* OCBBaseTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseTableViewController.m; sourceTree = "<group>"; };
-		7AEED7B478A4DAAE42636F9E /* OCBModuleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBModuleProtocol.h; sourceTree = "<group>"; };
-		7B1AF39012D5BDD8D4D04F1E /* OCBUserSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUserSession.m; sourceTree = "<group>"; };
-		7C53DB9BB8CD15EEE178E2C1 /* NSArray+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+OCBAdditions.h"; sourceTree = "<group>"; };
-		7D53B49C26B25C4BE742C96D /* OCBNetworkClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkClient.h; sourceTree = "<group>"; };
-		806E09753C72898678E07E0C /* OCBAccountBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountBootstrapTask.h; sourceTree = "<group>"; };
-		810F67AF6734A110E6696CF9 /* OCBBaseAPIService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseAPIService.m; sourceTree = "<group>"; };
-		8402A00F000387D5CB4B40D3 /* OCBRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRouterTests.m; sourceTree = "<group>"; };
-		88B8ACB96F6FE54E015742C1 /* OCAppBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCAppBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C6407DCFA945497A1E04F9D /* OCBTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBTabBarController.h; sourceTree = "<group>"; };
-		8CB56D708007A41DBE8A3017 /* OCBStarterAppConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBStarterAppConfiguration.h; sourceTree = "<group>"; };
-		9454AF880D8B54F902D2471C /* UIView+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCBAdditions.m"; sourceTree = "<group>"; };
-		953791D844C1F98F1E1C0FB7 /* OCBDemoRouteCatalog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoRouteCatalog.m; sourceTree = "<group>"; };
-		983B765D2B9DCB3ED20E79A2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9A23F04A75CEFE56A82A4228 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B3A2738B527442D1927DA64 /* OCBCacheCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBCacheCenter.h; sourceTree = "<group>"; };
-		9B7735A0EEDC346F96E43DB8 /* OCBNetworkClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkClient.m; sourceTree = "<group>"; };
-		9D2015DFD39DE16A4BD07A43 /* Pods_OCAppBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCAppBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A126AA4760469C20AF758792 /* Pods-OCAppBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-OCAppBoxTests/Pods-OCAppBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A456A7153B8131B3DC171131 /* OCBAppContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppContext.m; sourceTree = "<group>"; };
-		A7F029B99E367F1B0B8C747A /* OCBProfileModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileModule.h; sourceTree = "<group>"; };
-		AA58C12775ABAEC0D42BA52B /* OCBProfileModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileModule.m; sourceTree = "<group>"; };
-		AEF732CA4D47DCC63A06B3CF /* OCBNetworkClientTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkClientTests.m; sourceTree = "<group>"; };
-		AF95D7BB42B5A59CD3EEDA2E /* OCBModuleManagerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBModuleManagerTests.m; sourceTree = "<group>"; };
-		B119A11A7B1BAA8DBAF84FFF /* OCBModuleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBModuleManager.m; sourceTree = "<group>"; };
-		B25B95C6768C79346E5D95CB /* OCBStarterAppConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBStarterAppConfiguration.m; sourceTree = "<group>"; };
-		B3E7FD12D9DE86CC47838088 /* OCBNetworkError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkError.m; sourceTree = "<group>"; };
-		B55BA6863761FB97E157534C /* OCBPermissionService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBPermissionService.h; sourceTree = "<group>"; };
-		B767D59016D59C831C49A14C /* OCBUIBaseControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUIBaseControllerTests.m; sourceTree = "<group>"; };
-		B89C77E4A41549536213D4AA /* Pods-OCAppBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBox.release.xcconfig"; path = "Target Support Files/Pods-OCAppBox/Pods-OCAppBox.release.xcconfig"; sourceTree = "<group>"; };
-		BE71DB59A815B2FF10B4193E /* NSDictionary+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OCBAdditions.m"; sourceTree = "<group>"; };
-		C026DB18189A8BBC516F155B /* OCBBaseAPIServiceTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseAPIServiceTests.m; sourceTree = "<group>"; };
-		C0CFF43D61CB17820F208FAE /* OCBBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseViewController.m; sourceTree = "<group>"; };
-		C2461BBBF455684181037912 /* OCBNetworkResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkResponse.m; sourceTree = "<group>"; };
-		C29516EF027CBF528B23FABD /* OCBBaseCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseCollectionViewController.h; sourceTree = "<group>"; };
-		C4B29960D9F3A905AD419540 /* OCBFoundationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBFoundationMacros.h; sourceTree = "<group>"; };
-		CA9B8A389B812E5522037D82 /* OCBThemeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBThemeManager.h; sourceTree = "<group>"; };
-		CC23907BC87F8EFFAE95A8C0 /* OCBHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeViewController.m; sourceTree = "<group>"; };
-		CE2B5976FBDD1F4E2FA13A5B /* OCBRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRequest.m; sourceTree = "<group>"; };
-		CEA51ECA262D793494D1F38B /* OCBProfileBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileBootstrapTask.h; sourceTree = "<group>"; };
-		D1756F73366A928FCF3EA3AA /* OCBBaseCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseCollectionViewController.m; sourceTree = "<group>"; };
-		D494EE48817954375EEAD469 /* OCBStarterAppConfigurationTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBStarterAppConfigurationTests.m; sourceTree = "<group>"; };
-		D4FCEF158A15A253F7AC0BAC /* OCBBaseTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseTableViewController.h; sourceTree = "<group>"; };
-		D58D49AC162D28D71E8D0808 /* OCBDemoRouteCatalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDemoRouteCatalog.h; sourceTree = "<group>"; };
-		D5E362094533C44AA74C20E8 /* OCBAccountBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountBootstrapTask.m; sourceTree = "<group>"; };
-		D6F738B5BCA3B603F5C22C6D /* Pods-OCAppBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBox.debug.xcconfig"; path = "Target Support Files/Pods-OCAppBox/Pods-OCAppBox.debug.xcconfig"; sourceTree = "<group>"; };
-		D966FBC0E379CA4A77725400 /* OCBNetworkResponseTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkResponseTests.m; sourceTree = "<group>"; };
-		DB2E57E305D10F253B5E550C /* OCBUserSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBUserSession.h; sourceTree = "<group>"; };
-		DDF0E9C02EFE16E77B4AE31E /* Pods_OCAppBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCAppBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15A5D677A6A90F8AC100BF6 /* OCBToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBToast.h; sourceTree = "<group>"; };
-		E39E46AB1DF367F5FE8AB7E3 /* OCBDemoAppLauncherTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoAppLauncherTests.m; sourceTree = "<group>"; };
-		E497DF6E9AFC4618DFD6F98C /* OCBDebugPanelModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDebugPanelModule.m; sourceTree = "<group>"; };
-		E55F28D4220D60833D818EA9 /* OCBProfileViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileViewController.m; sourceTree = "<group>"; };
-		E56757746D30DC954B05E0B6 /* OCBDemoAppLauncher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoAppLauncher.m; sourceTree = "<group>"; };
-		EA7D10F8A49158C4A1ECD657 /* OCBLaunchTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLaunchTask.h; sourceTree = "<group>"; };
-		EF2CD8999A2EA52B4CEF14E1 /* OCBPermissionService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBPermissionService.m; sourceTree = "<group>"; };
-		F288BBA3C2ADA0C7B12DAB44 /* OCBToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBToast.m; sourceTree = "<group>"; };
-		F8B1A199D1473DE368A6939B /* OCBThemeManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBThemeManager.m; sourceTree = "<group>"; };
-		F8C830F5C9C155A0A561B00E /* OCBTabBarItemDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBTabBarItemDescriptor.h; sourceTree = "<group>"; };
-		FB29AA235CC3CCFCB4372087 /* OCBDebugPanelViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDebugPanelViewController.h; sourceTree = "<group>"; };
-		FF6F80ED3194EC9B87D30FA6 /* OCBAccountModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountModule.m; sourceTree = "<group>"; };
-		FFB647009C5E82E1B3E8ECD8 /* OCBAPIResponseMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAPIResponseMapper.m; sourceTree = "<group>"; };
+		0149F0C4B559BDD5ADACBA16 /* OCBBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseViewController.m; sourceTree = "<group>"; };
+		04C26A982B3E89F3BACF787B /* OCBKeychainStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBKeychainStore.h; sourceTree = "<group>"; };
+		083B2465808BC88E3D580DF7 /* OCBCacheCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBCacheCenter.h; sourceTree = "<group>"; };
+		0926CAF071C2285194CC4BCC /* OCBEmptyStateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBEmptyStateView.m; sourceTree = "<group>"; };
+		0A6B620A50D1ACE61DDC037B /* OCBRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRequest.m; sourceTree = "<group>"; };
+		0C8C7DC76832EEF1E45D82B1 /* UIColor+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCBAdditions.m"; sourceTree = "<group>"; };
+		0D01FF1B1E4FC40CC3CB5F4E /* OCBAccountViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountViewController.h; sourceTree = "<group>"; };
+		0EF9B3C312539CC4DB61741B /* OCBBaseTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseTableViewController.m; sourceTree = "<group>"; };
+		0FA50F61A23BDB5879C1D440 /* OCBAccountBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountBootstrapTask.h; sourceTree = "<group>"; };
+		0FF1937B7FD21910FD329785 /* NSArray+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+OCBAdditions.h"; sourceTree = "<group>"; };
+		11BD256593A95EA1D1A4B880 /* UIColor+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+OCBAdditions.h"; sourceTree = "<group>"; };
+		126A974FEC18DD79C2E004FE /* OCBProfileBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileBootstrapTask.h; sourceTree = "<group>"; };
+		175E28F8FBD7FBD7282120AB /* OCBAutoRegister.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAutoRegister.h; sourceTree = "<group>"; };
+		18CCED7F2C4740B37367D0CE /* OCBUserSessionService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBUserSessionService.h; sourceTree = "<group>"; };
+		18E20BD4406F44A1BEB9E3B2 /* OCBNetworkResponseTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkResponseTests.m; sourceTree = "<group>"; };
+		1C415DA9017F6AB91D95036E /* OCBDemoRouteCatalog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoRouteCatalog.m; sourceTree = "<group>"; };
+		1C95DAE625C6AB364BA6073D /* OCBAccountViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountViewController.m; sourceTree = "<group>"; };
+		1F146158F939049666A905C4 /* OCBNetworkResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkResponse.h; sourceTree = "<group>"; };
+		21B09B9F1779868B4E33F140 /* OCBAccountBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountBootstrapTask.m; sourceTree = "<group>"; };
+		2297D8E4BBEBC48A281C392C /* OCBConfigCenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBConfigCenter.h; sourceTree = "<group>"; };
+		29098DE1B7915817AE390743 /* OCBRouterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRouterTests.m; sourceTree = "<group>"; };
+		2A59A5F82D69EA1463989F4B /* OCBBaseCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseCollectionViewController.h; sourceTree = "<group>"; };
+		2AE080B73F18AD39F4A10610 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D8FCC5D4435D37157CB8390 /* OCBNetworkClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkClient.h; sourceTree = "<group>"; };
+		2E9C61CE83DF816A8BC30F28 /* OCBDemoAppLauncher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoAppLauncher.m; sourceTree = "<group>"; };
+		2EA8748C0D44AF7F066097F3 /* OCBNetworkClientTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkClientTests.m; sourceTree = "<group>"; };
+		305EA887FB65D6BBA48F4DED /* OCBRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRouter.h; sourceTree = "<group>"; };
+		3103C191917D52D8B58D5285 /* OCBAccountModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAccountModule.m; sourceTree = "<group>"; };
+		344A904750A7CFA279317DFB /* OCBStarterAppConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBStarterAppConfiguration.h; sourceTree = "<group>"; };
+		358F6D9DD35F7DD341B77A01 /* OCBLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLoadingView.h; sourceTree = "<group>"; };
+		37AE4413D0C8F38964E5643B /* OCBAppContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAppContext.h; sourceTree = "<group>"; };
+		38D34916F03F12E200879887 /* OCBCacheCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBCacheCenter.m; sourceTree = "<group>"; };
+		39E083F8D7918E120BA00465 /* OCBServiceRegistry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBServiceRegistry.h; sourceTree = "<group>"; };
+		3B257C21D3B0B25860F85C50 /* OCBLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLogger.h; sourceTree = "<group>"; };
+		41492BC7766E690A42AFC6D7 /* OCBToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBToast.m; sourceTree = "<group>"; };
+		42C4336E6BC44DC87AA9EC9F /* OCBModuleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBModuleManager.h; sourceTree = "<group>"; };
+		439DEB6F099D63612411F106 /* OCBBaseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseModel.m; sourceTree = "<group>"; };
+		448786E54E0925A9D41E8B27 /* OCBCacheCenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBCacheCenterTests.m; sourceTree = "<group>"; };
+		471FA51AEC0B1079D3C9D189 /* OCBTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBTabBarController.h; sourceTree = "<group>"; };
+		476BFB50406F8488B0C6B642 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A8FF30C9D54F5818E6CD2A0 /* NSDictionary+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+OCBAdditions.h"; sourceTree = "<group>"; };
+		4F274CCA5F467811678EF6D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = "<group>"; };
+		5167855A649B8F84C509322A /* OCBNetworkResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkResponse.m; sourceTree = "<group>"; };
+		5FACE954EF7DE93A1E5F2546 /* OCBProfileBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileBootstrapTask.m; sourceTree = "<group>"; };
+		618C844FEA8DFACAC2C1D9B9 /* OCBAppContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppContext.m; sourceTree = "<group>"; };
+		64BE050B60D05EE9ED4E558B /* Pods-OCAppBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBox.debug.xcconfig"; path = "Target Support Files/Pods-OCAppBox/Pods-OCAppBox.debug.xcconfig"; sourceTree = "<group>"; };
+		65D8946CB21631EA76ACBE8E /* OCBRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRouter.m; sourceTree = "<group>"; };
+		68964ED1266C14AECE3E8911 /* Pods-OCAppBoxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBoxTests.debug.xcconfig"; path = "Target Support Files/Pods-OCAppBoxTests/Pods-OCAppBoxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D07231A8D44BA1FE25AA332 /* OCBUserSessionService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUserSessionService.m; sourceTree = "<group>"; };
+		6F9978DD1F4B52ECFCAD68F8 /* NSDictionary+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+OCBAdditions.m"; sourceTree = "<group>"; };
+		7290F59F1A6792F99D2FB648 /* OCBBaseModelTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseModelTests.m; sourceTree = "<group>"; };
+		73E5F484A8F3DAEC9BAF71F8 /* OCBBaseAPIService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseAPIService.h; sourceTree = "<group>"; };
+		78F2A687C7B4073C622615DA /* OCBProfileViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileViewController.m; sourceTree = "<group>"; };
+		7B41E5539369D0E4B3557D5C /* OCBPermissionService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBPermissionService.m; sourceTree = "<group>"; };
+		7B8C700DFBE29393F8FF01AD /* OCBBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseViewController.h; sourceTree = "<group>"; };
+		7BE85D50BFC3B7D4A9CE39DB /* OCAppBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCAppBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2334F40B2E028627023209 /* AppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DB321D27BA7F0ED13D518BC /* OCBDebugPanelViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDebugPanelViewController.h; sourceTree = "<group>"; };
+		7DDE7F55764570B701B4CA8F /* OCBNetworkError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNetworkError.h; sourceTree = "<group>"; };
+		7E980D670DA418DB6590D0D8 /* OCBLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBLoadingView.m; sourceTree = "<group>"; };
+		7EB261B8B0FF3444ECA24C89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F63E908B3721E440847985E /* OCBFoundationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBFoundationMacros.h; sourceTree = "<group>"; };
+		82BF778FF0F8C36A361F4390 /* UIView+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+OCBAdditions.h"; sourceTree = "<group>"; };
+		8401B17EC8B32395CF0B047A /* OCBUIBaseControllerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUIBaseControllerTests.m; sourceTree = "<group>"; };
+		87E2F6F5C35CD75498E68E35 /* OCAppBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCAppBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C3C7FC922C07CB59646EE3 /* OCBAutoRegister.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAutoRegister.m; sourceTree = "<group>"; };
+		8925A228528CBF1AAD417D89 /* OCBModuleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBModuleProtocol.h; sourceTree = "<group>"; };
+		8A8417CE9B6C5E0B9095C4A6 /* OCBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRequest.h; sourceTree = "<group>"; };
+		8B35B685A3191882B273CBBE /* OCBKeychainStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBKeychainStore.m; sourceTree = "<group>"; };
+		8C6F15ABFF04C72C0FC12AD6 /* OCBThemeManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBThemeManager.m; sourceTree = "<group>"; };
+		8ED533F0C6762A58D31CCCC1 /* OCBHomeBootstrapTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeBootstrapTask.m; sourceTree = "<group>"; };
+		8ED7300351C25BA22B92BE2E /* OCBBaseAPIServiceTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseAPIServiceTests.m; sourceTree = "<group>"; };
+		90A57017F285831B9E1EAAAF /* OCBBaseCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseCollectionViewController.m; sourceTree = "<group>"; };
+		90DE72C7A862A5A3908B13B5 /* OCBDebugPanelModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDebugPanelModule.m; sourceTree = "<group>"; };
+		91E61BBC60CD9A38C1643813 /* OCBLaunchTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBLaunchTask.h; sourceTree = "<group>"; };
+		9797E1C0CEC85B28DC5F7972 /* NSString+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+OCBAdditions.m"; sourceTree = "<group>"; };
+		994F209F7F09A166FD1E3E74 /* OCBAuthService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAuthService.h; sourceTree = "<group>"; };
+		9D3C3065B8F5753F286FD32F /* OCBModuleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBModuleManager.m; sourceTree = "<group>"; };
+		A02D1962E031AEF135E98596 /* OCBProfileModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileModule.h; sourceTree = "<group>"; };
+		A1D11F360B984D4808F0AB3B /* OCBBaseAPIService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBBaseAPIService.m; sourceTree = "<group>"; };
+		A21DE8B8C43D3CFB2EFA222F /* OCBNavController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNavController.m; sourceTree = "<group>"; };
+		A60E5E92B572FD78C3BE2EF2 /* OCBTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBTabBarController.m; sourceTree = "<group>"; };
+		A762A658F5534FF7B2B2F2D3 /* OCBConfigCenterTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBConfigCenterTests.m; sourceTree = "<group>"; };
+		A7F9E219D09E6798FB995AD1 /* OCBKeychainStoreTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBKeychainStoreTests.m; sourceTree = "<group>"; };
+		A982AE8DCC81D6B9977B3DA8 /* Pods_OCAppBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCAppBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DDE31B0F99D72BD514705D /* OCBLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBLogger.m; sourceTree = "<group>"; };
+		ABDBAA993751F651FB744797 /* OCBDebugPanelViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDebugPanelViewController.m; sourceTree = "<group>"; };
+		AECF46CE0DE94D9999E33E7F /* OCAppBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCAppBox.h; sourceTree = "<group>"; };
+		AF58FECB8A62C066E7975861 /* OCBNetworkClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkClient.m; sourceTree = "<group>"; };
+		AF893602BD0FD4A990C8B2A8 /* OCBDemoRouteCatalog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDemoRouteCatalog.h; sourceTree = "<group>"; };
+		AFFE6E674D52E7F6401BF6FF /* OCBTabBarItemDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBTabBarItemDescriptor.m; sourceTree = "<group>"; };
+		B0662A0C6CC9D4B0210F5E0E /* OCBUserSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBUserSession.h; sourceTree = "<group>"; };
+		B0D4660DAB9210EAA23C62B1 /* OCBHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeViewController.h; sourceTree = "<group>"; };
+		B4BE30C835ABAF7F5B6B764C /* OCBDemoAppLauncher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDemoAppLauncher.h; sourceTree = "<group>"; };
+		BB3E494421A95CC21088DCCB /* OCBServiceRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBServiceRegistry.m; sourceTree = "<group>"; };
+		BC4B7D5100428B6491AF05E8 /* OCBModuleManagerTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBModuleManagerTests.m; sourceTree = "<group>"; };
+		BE5DDFB4FDD0E1970F78FEEB /* UIView+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCBAdditions.m"; sourceTree = "<group>"; };
+		BFCC60FBD05A8A26B9FF6300 /* OCBAppContextTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppContextTests.m; sourceTree = "<group>"; };
+		C0F115BB2F7AD0B7C8C5604A /* OCBEmptyStateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBEmptyStateView.h; sourceTree = "<group>"; };
+		C14094BDFC8360C8832BDDBD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = "<group>"; };
+		C1B19A825051C7454BA21882 /* NSArray+OCBAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OCBAdditions.m"; sourceTree = "<group>"; };
+		C3A9BA6AD441439F53DB4123 /* OCBFoundationTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBFoundationTests.m; sourceTree = "<group>"; };
+		C62C9B4F64576B610A26B867 /* OCBNavController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBNavController.h; sourceTree = "<group>"; };
+		C63BD59084DCC7822DABEA0B /* OCBHomeModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeModule.m; sourceTree = "<group>"; };
+		CD985664ECE3833CA016191B /* OCBDemoAppLauncherTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBDemoAppLauncherTests.m; sourceTree = "<group>"; };
+		CE02088CB4DF7B16B37FAA12 /* OCBDebugPanelModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBDebugPanelModule.h; sourceTree = "<group>"; };
+		CFE7E0937436E896664DF567 /* OCBUserSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBUserSession.m; sourceTree = "<group>"; };
+		D0ED6A80D5E691670E19225B /* Pods_OCAppBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCAppBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1AAFEEC906A9312A4085BF3 /* OCBRemoteConfigService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBRemoteConfigService.h; sourceTree = "<group>"; };
+		D2662E7F7B201BD6E414D28B /* OCBTabBarItemDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBTabBarItemDescriptor.h; sourceTree = "<group>"; };
+		D451D410D818B9CFCF496695 /* OCBThemeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBThemeManager.h; sourceTree = "<group>"; };
+		D66E4FB85EB683A673B53E76 /* OCBProfileModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBProfileModule.m; sourceTree = "<group>"; };
+		D70F6DDCD0CCFF9AA07534B5 /* OCBBaseTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseTableViewController.h; sourceTree = "<group>"; };
+		D8FC91880816C4071B2134C7 /* OCBBaseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBBaseModel.h; sourceTree = "<group>"; };
+		D97A1A2B1E532ED679A0A91F /* OCBConfigCenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBConfigCenter.m; sourceTree = "<group>"; };
+		DAE8C69266F3431F7052B545 /* OCBStarterAppConfigurationTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBStarterAppConfigurationTests.m; sourceTree = "<group>"; };
+		DB1A30E5484A958917E33BFE /* OCBHomeBootstrapTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeBootstrapTask.h; sourceTree = "<group>"; };
+		DC529315A5249BAFB484B587 /* OCBNetworkError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBNetworkError.m; sourceTree = "<group>"; };
+		E0C71710B12976FD68487FB8 /* OCBRemoteConfigService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBRemoteConfigService.m; sourceTree = "<group>"; };
+		E0EFC63BFFB15C7391CFE8A9 /* NSString+OCBAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+OCBAdditions.h"; sourceTree = "<group>"; };
+		E56E9846A585DC8A416CB8AD /* OCBToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBToast.h; sourceTree = "<group>"; };
+		E60571BD0677CB3299398E0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E615B181C6DFCE8C4EAE487D /* OCBStarterAppConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBStarterAppConfiguration.m; sourceTree = "<group>"; };
+		E6281329550774540E358B13 /* OCBAccountModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAccountModule.h; sourceTree = "<group>"; };
+		E6A0E33C54772B4AF681CDDC /* OCBProfileViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBProfileViewController.h; sourceTree = "<group>"; };
+		E82C839A0CEBA3B9712561FB /* Pods-OCAppBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBoxTests.release.xcconfig"; path = "Target Support Files/Pods-OCAppBoxTests/Pods-OCAppBoxTests.release.xcconfig"; sourceTree = "<group>"; };
+		E85F40F4532E1D0DD94BA24D /* OCBPermissionService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBPermissionService.h; sourceTree = "<group>"; };
+		E95DE3388B35299B7080D20F /* OCBServiceRegistryTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBServiceRegistryTests.m; sourceTree = "<group>"; };
+		EAEBB77D1A2224EA77FCF8DB /* OCBAppMetadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAppMetadata.m; sourceTree = "<group>"; };
+		EB2EFD3821DEC4BA289BB591 /* OCBAPIResponseMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAPIResponseMapper.m; sourceTree = "<group>"; };
+		EFC65E3C1CB1F6FDD78AA9AE /* AppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0F230B5DF4F91B7E6DC3946 /* OCBHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBHomeViewController.m; sourceTree = "<group>"; };
+		F1EFCFF430C2B1F47C2D3AB6 /* OCBHomeModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBHomeModule.h; sourceTree = "<group>"; };
+		F20922E757E0C6EA25AD3ED0 /* OCBAppMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAppMetadata.h; sourceTree = "<group>"; };
+		F6E2159A5397FB1BD0C4E6E1 /* Pods-OCAppBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCAppBox.release.xcconfig"; path = "Target Support Files/Pods-OCAppBox/Pods-OCAppBox.release.xcconfig"; sourceTree = "<group>"; };
+		FB57EF7B19D9B430E0FC6E70 /* OCBAPIResponseMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OCBAPIResponseMapper.h; sourceTree = "<group>"; };
+		FD1F86C2B42E7C71EC7A0DF0 /* OCBAuthService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OCBAuthService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		225661033824B805F270BBD3 /* Frameworks */ = {
+		79C30E27632C120752A31BDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D8D38F0575E3EC87D5053A /* Foundation.framework in Frameworks */,
-				8018BDE405E329786FDC72DC /* UIKit.framework in Frameworks */,
-				76DD9FB04F2CBABF076659AF /* Pods_OCAppBoxTests.framework in Frameworks */,
+				2CAC43F75405D135D8728BC3 /* Foundation.framework in Frameworks */,
+				8F99A31475A4F01C1819B129 /* UIKit.framework in Frameworks */,
+				3FB8169B800E18D598E6DD61 /* Security.framework in Frameworks */,
+				0D21AB8CBBD800D5A3FB6B08 /* Pods_OCAppBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2963936482905C9BD13B70D4 /* Frameworks */ = {
+		B2FE5F6617B935C1074FDE95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC91A0EC7D638CFD414543D /* Foundation.framework in Frameworks */,
-				D63605802746FFD09EE952A5 /* UIKit.framework in Frameworks */,
-				30836CA248BCA49954BE6197 /* Pods_OCAppBox.framework in Frameworks */,
+				5A6A92B5DF2936CF3474458D /* Foundation.framework in Frameworks */,
+				1321E8F58C56B4F7C30ED406 /* UIKit.framework in Frameworks */,
+				E8AA416DF5438F19A3039A2E /* Pods_OCAppBoxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06F88BBD5E0363BD6FFF3777 /* Products */ = {
+		08CDCAF8B6BB9D25DF79D12D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				5C62512A9D17DF5E63161761 /* OCAppBox.app */,
-				88B8ACB96F6FE54E015742C1 /* OCAppBoxTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1541FE13DDB3A745BD8E48B9 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5770DE791AA0C27C8C0A5A70 /* OCBHomeBootstrapTask.h */,
-				3CD0038EAFFB202B50038254 /* OCBHomeBootstrapTask.m */,
-				73A391062211189F1565B42C /* OCBHomeModule.h */,
-				664BC4841BEABCE65595B111 /* OCBHomeModule.m */,
-				C0BE3196DE10EB9DBD32A0D6 /* UI */,
-			);
-			name = Home;
-			path = Home;
-			sourceTree = "<group>";
-		};
-		1B7BA62AAC9E36CCF5A61F59 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				FB29AA235CC3CCFCB4372087 /* OCBDebugPanelViewController.h */,
-				36094457CC3ADCF261EEDBFD /* OCBDebugPanelViewController.m */,
-			);
-			name = UI;
-			path = UI;
-			sourceTree = "<group>";
-		};
-		1D9EF56F94E46EC7E35C45DE /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				CEA51ECA262D793494D1F38B /* OCBProfileBootstrapTask.h */,
-				6797561DD6551EEC304F97A2 /* OCBProfileBootstrapTask.m */,
-				A7F029B99E367F1B0B8C747A /* OCBProfileModule.h */,
-				AA58C12775ABAEC0D42BA52B /* OCBProfileModule.m */,
-				D9E825DD6C5D8CB4AAEFA479 /* UI */,
+				126A974FEC18DD79C2E004FE /* OCBProfileBootstrapTask.h */,
+				5FACE954EF7DE93A1E5F2546 /* OCBProfileBootstrapTask.m */,
+				A02D1962E031AEF135E98596 /* OCBProfileModule.h */,
+				D66E4FB85EB683A673B53E76 /* OCBProfileModule.m */,
+				6ACBE78E046821BB9A7D7321 /* UI */,
 			);
 			name = Profile;
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		21241B0757659552FF014431 /* Module */ = {
+		1E1BD2B40857B9496774B944 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DA6E4535D811207C943A70F8 /* Account */,
-				1541FE13DDB3A745BD8E48B9 /* Home */,
-				1D9EF56F94E46EC7E35C45DE /* Profile */,
+				465367375DE1FD20D27B96F4 /* Base */,
+				3086E6927A54CFFC6EAACB88 /* Component */,
+				7762A22435614F5FDBB20C9D /* Theme */,
 			);
-			name = Module;
-			path = Module;
+			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		28E590A2FBB636AD6B2EF72C /* Macro */ = {
+		26D74C39E4AF096FAA9EC54D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C4B29960D9F3A905AD419540 /* OCBFoundationMacros.h */,
+				DB1A30E5484A958917E33BFE /* OCBHomeBootstrapTask.h */,
+				8ED533F0C6762A58D31CCCC1 /* OCBHomeBootstrapTask.m */,
+				F1EFCFF430C2B1F47C2D3AB6 /* OCBHomeModule.h */,
+				C63BD59084DCC7822DABEA0B /* OCBHomeModule.m */,
+				75562C6ADB26A9FD1BB729DE /* UI */,
 			);
-			name = Macro;
-			path = Macro;
+			name = Home;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		2CD78411909A63A27BE92AB8 /* Base */ = {
+		285CE1B1AAB59C8A0AA78BAE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				4373806910F7CD6DF85285BF /* OCBBaseAPIService.h */,
-				810F67AF6734A110E6696CF9 /* OCBBaseAPIService.m */,
+				73E5F484A8F3DAEC9BAF71F8 /* OCBBaseAPIService.h */,
+				A1D11F360B984D4808F0AB3B /* OCBBaseAPIService.m */,
 			);
 			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
-		3258FA08D40B39BF6412BB01 /* Network */ = {
+		2989383C5E29AD2D1C4B62C4 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				7449E2FD53527D0F49FB0E51 /* OCBAPIResponseMapper.h */,
-				FFB647009C5E82E1B3E8ECD8 /* OCBAPIResponseMapper.m */,
-				7D53B49C26B25C4BE742C96D /* OCBNetworkClient.h */,
-				9B7735A0EEDC346F96E43DB8 /* OCBNetworkClient.m */,
-				36A57C6DE2D1ADA6CAAF8364 /* OCBNetworkError.h */,
-				B3E7FD12D9DE86CC47838088 /* OCBNetworkError.m */,
-				71E3553EDD415CAB4B116B60 /* OCBNetworkResponse.h */,
-				C2461BBBF455684181037912 /* OCBNetworkResponse.m */,
-				1CC6282C7A26DA896A108263 /* OCBRequest.h */,
-				CE2B5976FBDD1F4E2FA13A5B /* OCBRequest.m */,
-			);
-			name = Network;
-			path = Network;
-			sourceTree = "<group>";
-		};
-		33563658F668174E03713EBD /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				6153EF673C3919FE0E6EF628 /* Auth */,
-				2CD78411909A63A27BE92AB8 /* Base */,
-				D2D0995C44FB4A8C5CB00F33 /* Config */,
-				EB93CBDD96781B40380CFD15 /* Permission */,
-				F7AF820713243234AC1EE336 /* User */,
-			);
-			name = Service;
-			path = Service;
-			sourceTree = "<group>";
-		};
-		46F7F34E7471DB327989D4BD /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				51ED08C5070C44C5F6FB3DF7 /* OCBAppContextTests.m */,
-				C026DB18189A8BBC516F155B /* OCBBaseAPIServiceTests.m */,
-				021AA4A43BA74ABB9C3194E3 /* OCBCacheCenterTests.m */,
-				E39E46AB1DF367F5FE8AB7E3 /* OCBDemoAppLauncherTests.m */,
-				20BAA4E96561F475251EC057 /* OCBFoundationTests.m */,
-				AF95D7BB42B5A59CD3EEDA2E /* OCBModuleManagerTests.m */,
-				AEF732CA4D47DCC63A06B3CF /* OCBNetworkClientTests.m */,
-				D966FBC0E379CA4A77725400 /* OCBNetworkResponseTests.m */,
-				8402A00F000387D5CB4B40D3 /* OCBRouterTests.m */,
-				3F7E1F0EAFCDD3F884C09F05 /* OCBServiceRegistryTests.m */,
-				D494EE48817954375EEAD469 /* OCBStarterAppConfigurationTests.m */,
-				B767D59016D59C831C49A14C /* OCBUIBaseControllerTests.m */,
-			);
-			name = Tests;
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		48CF0CCC7808BBBBDD9CF866 /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				CAEB3B2784232123D941C110 /* Category */,
-				28E590A2FBB636AD6B2EF72C /* Macro */,
-				6EA0E5F017C9F504DCC1FF2C /* Util */,
-			);
-			name = Foundation;
-			path = Foundation;
-			sourceTree = "<group>";
-		};
-		4F304CA42B88335F15229B2C /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				DD28907EE8A136F9B2F8A535 /* Debug */,
-			);
-			name = Support;
-			path = Support;
-			sourceTree = "<group>";
-		};
-		57880D6CF6DF26ED65EE35C5 /* Host */ = {
-			isa = PBXGroup;
-			children = (
-				1DE74CCE38C18FB001970B0D /* OCBDemoAppLauncher.h */,
-				E56757746D30DC954B05E0B6 /* OCBDemoAppLauncher.m */,
-				D58D49AC162D28D71E8D0808 /* OCBDemoRouteCatalog.h */,
-				953791D844C1F98F1E1C0FB7 /* OCBDemoRouteCatalog.m */,
-				8CB56D708007A41DBE8A3017 /* OCBStarterAppConfiguration.h */,
-				B25B95C6768C79346E5D95CB /* OCBStarterAppConfiguration.m */,
-			);
-			name = Host;
-			path = Host;
-			sourceTree = "<group>";
-		};
-		60D487DA907188B2EA5739E2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				8B452B052AFC130C7D6761BD /* Base */,
-				75E88D8D939AFECA48F52641 /* Component */,
-				C343EFC0534084020DE0CA0C /* Theme */,
-			);
-			name = UI;
-			path = UI;
-			sourceTree = "<group>";
-		};
-		6153EF673C3919FE0E6EF628 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				666655AD0C84D92CBBB832D2 /* OCBAuthService.h */,
-				267AA07964CF771639E7B990 /* OCBAuthService.m */,
-			);
-			name = Auth;
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		6EA0E5F017C9F504DCC1FF2C /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				52F0FD66AECD9D16FE88918C /* OCBAppMetadata.h */,
-				219C779B674D09FAB42269B9 /* OCBAppMetadata.m */,
-			);
-			name = Util;
-			path = Util;
-			sourceTree = "<group>";
-		};
-		75E88D8D939AFECA48F52641 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				2B66ECE687D9BE718AE4E8FF /* OCBEmptyStateView.h */,
-				5E6D085662CA2E628EDF97E6 /* OCBEmptyStateView.m */,
-				041104BEC4A04C43B982D7E6 /* OCBLoadingView.h */,
-				1E948F49D447F1AEF9917924 /* OCBLoadingView.m */,
-				E15A5D677A6A90F8AC100BF6 /* OCBToast.h */,
-				F288BBA3C2ADA0C7B12DAB44 /* OCBToast.m */,
-			);
-			name = Component;
-			path = Component;
-			sourceTree = "<group>";
-		};
-		7793763568B7FB24FF0C8596 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				1932AC1703AD4B43CD3D4582 /* AppDelegate.h */,
-				027FDB83B153D673E50E8214 /* AppDelegate.m */,
-				ADED77D10D6583441B5968F0 /* Core */,
-				48CF0CCC7808BBBBDD9CF866 /* Foundation */,
-				57880D6CF6DF26ED65EE35C5 /* Host */,
-				9A23F04A75CEFE56A82A4228 /* Info.plist */,
-				C6406689DB76DFA07EF78872 /* Infra */,
-				983B765D2B9DCB3ED20E79A2 /* LaunchScreen.storyboard */,
-				21241B0757659552FF014431 /* Module */,
-				27BABDDDF1341B3F02492CC8 /* OCAppBox.h */,
-				33563658F668174E03713EBD /* Service */,
-				4F304CA42B88335F15229B2C /* Support */,
-				60D487DA907188B2EA5739E2 /* UI */,
-				0C2E5483A9B9757B99E94C96 /* main.m */,
-			);
-			name = App;
-			path = App;
-			sourceTree = "<group>";
-		};
-		8B452B052AFC130C7D6761BD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				C29516EF027CBF528B23FABD /* OCBBaseCollectionViewController.h */,
-				D1756F73366A928FCF3EA3AA /* OCBBaseCollectionViewController.m */,
-				D4FCEF158A15A253F7AC0BAC /* OCBBaseTableViewController.h */,
-				7936917DC756FEF79173DCB6 /* OCBBaseTableViewController.m */,
-				68508CF0BD503B9E75F6E9A1 /* OCBBaseViewController.h */,
-				C0CFF43D61CB17820F208FAE /* OCBBaseViewController.m */,
-				6841D70BB6643F6503ED4334 /* OCBNavController.h */,
-				28D8543FC162031B3D61A0D2 /* OCBNavController.m */,
-				8C6407DCFA945497A1E04F9D /* OCBTabBarController.h */,
-				6E56CCDF928A962FB4B2BED3 /* OCBTabBarController.m */,
-				F8C830F5C9C155A0A561B00E /* OCBTabBarItemDescriptor.h */,
-				5A8D6F809106FD1F21613E70 /* OCBTabBarItemDescriptor.m */,
-			);
-			name = Base;
-			path = Base;
-			sourceTree = "<group>";
-		};
-		92D9DC619E293467E3523DD8 = {
-			isa = PBXGroup;
-			children = (
-				06F88BBD5E0363BD6FFF3777 /* Products */,
-				9C237CD3B89C23AE9DCCEE82 /* Frameworks */,
-				7793763568B7FB24FF0C8596 /* App */,
-				46F7F34E7471DB327989D4BD /* Tests */,
-				D0F2D918CF731213E89DF7B7 /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		9C237CD3B89C23AE9DCCEE82 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B56E9F9A51EA5262280428FE /* iOS */,
-				5924EC5DF4B5B2AED5A584CE /* UIKit.framework */,
-				DDF0E9C02EFE16E77B4AE31E /* Pods_OCAppBox.framework */,
-				9D2015DFD39DE16A4BD07A43 /* Pods_OCAppBoxTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A76FAB260884DB01372EAE80 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				47AE1FB93FAA6C92ECC80E01 /* OCBAccountViewController.h */,
-				2A8343DF8702B9EC0E5145B1 /* OCBAccountViewController.m */,
-			);
-			name = UI;
-			path = UI;
-			sourceTree = "<group>";
-		};
-		ADED77D10D6583441B5968F0 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				7404F20E26001977658CAEF4 /* OCBAppContext.h */,
-				A456A7153B8131B3DC171131 /* OCBAppContext.m */,
-				64CBB9D742D6A28B1FB5E215 /* OCBAutoRegister.h */,
-				6624B0CB822FB11F5D78DB55 /* OCBAutoRegister.m */,
-				EA7D10F8A49158C4A1ECD657 /* OCBLaunchTask.h */,
-				3272388DC52E2449BE6020D0 /* OCBModuleManager.h */,
-				B119A11A7B1BAA8DBAF84FFF /* OCBModuleManager.m */,
-				7AEED7B478A4DAAE42636F9E /* OCBModuleProtocol.h */,
-				2F8125D77CEE09FD2C0F6EB9 /* OCBRouter.h */,
-				6AC963AA88A624FA6487FDCF /* OCBRouter.m */,
-				3F1104AC9863722167A46EA4 /* OCBServiceRegistry.h */,
-				772EE94DF7A45A7C8E7768BB /* OCBServiceRegistry.m */,
-			);
-			name = Core;
-			path = Core;
-			sourceTree = "<group>";
-		};
-		B56E9F9A51EA5262280428FE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5E6953DC05C16DF14B7BED47 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C0BE3196DE10EB9DBD32A0D6 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				233E8F784E211D8BB3621D81 /* OCBHomeViewController.h */,
-				CC23907BC87F8EFFAE95A8C0 /* OCBHomeViewController.m */,
-			);
-			name = UI;
-			path = UI;
-			sourceTree = "<group>";
-		};
-		C343EFC0534084020DE0CA0C /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				CA9B8A389B812E5522037D82 /* OCBThemeManager.h */,
-				F8B1A199D1473DE368A6939B /* OCBThemeManager.m */,
-			);
-			name = Theme;
-			path = Theme;
-			sourceTree = "<group>";
-		};
-		C6406689DB76DFA07EF78872 /* Infra */ = {
-			isa = PBXGroup;
-			children = (
-				FF434B52C6F9466AD9F77A79 /* Log */,
-				3258FA08D40B39BF6412BB01 /* Network */,
-				EE3E89C4B0ED7E1EBF4FD5B4 /* Storage */,
-			);
-			name = Infra;
-			path = Infra;
-			sourceTree = "<group>";
-		};
-		CAEB3B2784232123D941C110 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				7C53DB9BB8CD15EEE178E2C1 /* NSArray+OCBAdditions.h */,
-				31E5CED597B17540274FC546 /* NSArray+OCBAdditions.m */,
-				70EF1C631A999780FAE17A2F /* NSDictionary+OCBAdditions.h */,
-				BE71DB59A815B2FF10B4193E /* NSDictionary+OCBAdditions.m */,
-				333B9F4EB8AA252E677CFF14 /* NSString+OCBAdditions.h */,
-				3EEEF32E544A634AE6CD7412 /* NSString+OCBAdditions.m */,
-				0A3CF063A066CCD4F9B86669 /* UIColor+OCBAdditions.h */,
-				3F0B45AAC2D2170B8269C8CC /* UIColor+OCBAdditions.m */,
-				666E074D7BB29EE97672E476 /* UIView+OCBAdditions.h */,
-				9454AF880D8B54F902D2471C /* UIView+OCBAdditions.m */,
-			);
-			name = Category;
-			path = Category;
-			sourceTree = "<group>";
-		};
-		D0F2D918CF731213E89DF7B7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B89C77E4A41549536213D4AA /* Pods-OCAppBox.release.xcconfig */,
-				D6F738B5BCA3B603F5C22C6D /* Pods-OCAppBox.debug.xcconfig */,
-				1ADC8B95412B47C025EDC4C7 /* Pods-OCAppBoxTests.release.xcconfig */,
-				A126AA4760469C20AF758792 /* Pods-OCAppBoxTests.debug.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		D2D0995C44FB4A8C5CB00F33 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				331AC0C9DD8E86C764E68F42 /* OCBRemoteConfigService.h */,
-				59AB97475FBE3DA77CB3D2EC /* OCBRemoteConfigService.m */,
-			);
-			name = Config;
-			path = Config;
-			sourceTree = "<group>";
-		};
-		D9E825DD6C5D8CB4AAEFA479 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				3693427707F02C57382AB515 /* OCBProfileViewController.h */,
-				E55F28D4220D60833D818EA9 /* OCBProfileViewController.m */,
-			);
-			name = UI;
-			path = UI;
-			sourceTree = "<group>";
-		};
-		DA6E4535D811207C943A70F8 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				806E09753C72898678E07E0C /* OCBAccountBootstrapTask.h */,
-				D5E362094533C44AA74C20E8 /* OCBAccountBootstrapTask.m */,
-				127B2E66CE89020AC5CDE172 /* OCBAccountModule.h */,
-				FF6F80ED3194EC9B87D30FA6 /* OCBAccountModule.m */,
-				A76FAB260884DB01372EAE80 /* UI */,
+				0FA50F61A23BDB5879C1D440 /* OCBAccountBootstrapTask.h */,
+				21B09B9F1779868B4E33F140 /* OCBAccountBootstrapTask.m */,
+				E6281329550774540E358B13 /* OCBAccountModule.h */,
+				3103C191917D52D8B58D5285 /* OCBAccountModule.m */,
+				D1CE6B711B18361413A97088 /* UI */,
 			);
 			name = Account;
 			path = Account;
 			sourceTree = "<group>";
 		};
-		DD28907EE8A136F9B2F8A535 /* Debug */ = {
+		2BCEE431581CE9B9FE52935A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05BEC0FB601B5A275F783F3D /* OCBDebugPanelModule.h */,
-				E497DF6E9AFC4618DFD6F98C /* OCBDebugPanelModule.m */,
-				1B7BA62AAC9E36CCF5A61F59 /* UI */,
+				5B62215C3F3B9D01B309B280 /* iOS */,
+				4F274CCA5F467811678EF6D8 /* UIKit.framework */,
+				C14094BDFC8360C8832BDDBD /* Security.framework */,
+				D0ED6A80D5E691670E19225B /* Pods_OCAppBox.framework */,
+				A982AE8DCC81D6B9977B3DA8 /* Pods_OCAppBoxTests.framework */,
 			);
-			name = Debug;
-			path = Debug;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB93CBDD96781B40380CFD15 /* Permission */ = {
+		3086E6927A54CFFC6EAACB88 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				B55BA6863761FB97E157534C /* OCBPermissionService.h */,
-				EF2CD8999A2EA52B4CEF14E1 /* OCBPermissionService.m */,
+				C0F115BB2F7AD0B7C8C5604A /* OCBEmptyStateView.h */,
+				0926CAF071C2285194CC4BCC /* OCBEmptyStateView.m */,
+				358F6D9DD35F7DD341B77A01 /* OCBLoadingView.h */,
+				7E980D670DA418DB6590D0D8 /* OCBLoadingView.m */,
+				E56E9846A585DC8A416CB8AD /* OCBToast.h */,
+				41492BC7766E690A42AFC6D7 /* OCBToast.m */,
 			);
-			name = Permission;
-			path = Permission;
+			name = Component;
+			path = Component;
 			sourceTree = "<group>";
 		};
-		EE3E89C4B0ED7E1EBF4FD5B4 /* Storage */ = {
+		3AECEFA926648B8F5A39D701 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				9B3A2738B527442D1927DA64 /* OCBCacheCenter.h */,
-				35EEA8052DADB0F9575CEDA4 /* OCBCacheCenter.m */,
+				0FF1937B7FD21910FD329785 /* NSArray+OCBAdditions.h */,
+				C1B19A825051C7454BA21882 /* NSArray+OCBAdditions.m */,
+				4A8FF30C9D54F5818E6CD2A0 /* NSDictionary+OCBAdditions.h */,
+				6F9978DD1F4B52ECFCAD68F8 /* NSDictionary+OCBAdditions.m */,
+				E0EFC63BFFB15C7391CFE8A9 /* NSString+OCBAdditions.h */,
+				9797E1C0CEC85B28DC5F7972 /* NSString+OCBAdditions.m */,
+				11BD256593A95EA1D1A4B880 /* UIColor+OCBAdditions.h */,
+				0C8C7DC76832EEF1E45D82B1 /* UIColor+OCBAdditions.m */,
+				82BF778FF0F8C36A361F4390 /* UIView+OCBAdditions.h */,
+				BE5DDFB4FDD0E1970F78FEEB /* UIView+OCBAdditions.m */,
+			);
+			name = Category;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		465367375DE1FD20D27B96F4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2A59A5F82D69EA1463989F4B /* OCBBaseCollectionViewController.h */,
+				90A57017F285831B9E1EAAAF /* OCBBaseCollectionViewController.m */,
+				D70F6DDCD0CCFF9AA07534B5 /* OCBBaseTableViewController.h */,
+				0EF9B3C312539CC4DB61741B /* OCBBaseTableViewController.m */,
+				7B8C700DFBE29393F8FF01AD /* OCBBaseViewController.h */,
+				0149F0C4B559BDD5ADACBA16 /* OCBBaseViewController.m */,
+				C62C9B4F64576B610A26B867 /* OCBNavController.h */,
+				A21DE8B8C43D3CFB2EFA222F /* OCBNavController.m */,
+				471FA51AEC0B1079D3C9D189 /* OCBTabBarController.h */,
+				A60E5E92B572FD78C3BE2EF2 /* OCBTabBarController.m */,
+				D2662E7F7B201BD6E414D28B /* OCBTabBarItemDescriptor.h */,
+				AFFE6E674D52E7F6401BF6FF /* OCBTabBarItemDescriptor.m */,
+			);
+			name = Base;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4F3856904F010BAB651506BE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				083B2465808BC88E3D580DF7 /* OCBCacheCenter.h */,
+				38D34916F03F12E200879887 /* OCBCacheCenter.m */,
 			);
 			name = Storage;
 			path = Storage;
 			sourceTree = "<group>";
 		};
-		F7AF820713243234AC1EE336 /* User */ = {
+		57EE4A80F1989CB2737E353E /* Permission */ = {
 			isa = PBXGroup;
 			children = (
-				DB2E57E305D10F253B5E550C /* OCBUserSession.h */,
-				7B1AF39012D5BDD8D4D04F1E /* OCBUserSession.m */,
-				31152E9B08F1BA15D8F7FD32 /* OCBUserSessionService.h */,
-				5867923CE710928B3A55F61E /* OCBUserSessionService.m */,
+				E85F40F4532E1D0DD94BA24D /* OCBPermissionService.h */,
+				7B41E5539369D0E4B3557D5C /* OCBPermissionService.m */,
 			);
-			name = User;
-			path = User;
+			name = Permission;
+			path = Permission;
 			sourceTree = "<group>";
 		};
-		FF434B52C6F9466AD9F77A79 /* Log */ = {
+		5880BD7E5EB2B7E45479DE91 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				03EFB2CC59795B2DE24F0ED9 /* OCBLogger.h */,
-				2155FAEDF863C9CC0D321447 /* OCBLogger.m */,
+				2989383C5E29AD2D1C4B62C4 /* Account */,
+				26D74C39E4AF096FAA9EC54D /* Home */,
+				08CDCAF8B6BB9D25DF79D12D /* Profile */,
+			);
+			name = Module;
+			path = Module;
+			sourceTree = "<group>";
+		};
+		5A9E7B7FFE9031BB6155FDEF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6A77F1C04CE84FBF64A1C2C0 /* Auth */,
+				285CE1B1AAB59C8A0AA78BAE /* Base */,
+				A42AB96165DAE9199C6BE6DF /* Config */,
+				57EE4A80F1989CB2737E353E /* Permission */,
+				A33D377A17A513BB5E18BF0D /* User */,
+			);
+			name = Service;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5B62215C3F3B9D01B309B280 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E60571BD0677CB3299398E0B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5D90CAF375D106599C56DD9D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				3B257C21D3B0B25860F85C50 /* OCBLogger.h */,
+				A9DDE31B0F99D72BD514705D /* OCBLogger.m */,
 			);
 			name = Log;
 			path = Log;
 			sourceTree = "<group>";
 		};
+		6A77F1C04CE84FBF64A1C2C0 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				994F209F7F09A166FD1E3E74 /* OCBAuthService.h */,
+				FD1F86C2B42E7C71EC7A0DF0 /* OCBAuthService.m */,
+			);
+			name = Auth;
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		6ACBE78E046821BB9A7D7321 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E6A0E33C54772B4AF681CDDC /* OCBProfileViewController.h */,
+				78F2A687C7B4073C622615DA /* OCBProfileViewController.m */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6B0F3EC1819BC113CEF929A7 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				B5702DC1FB7FA735CEC128EF /* Config */,
+				5D90CAF375D106599C56DD9D /* Log */,
+				6E697C874323BC84F54AB84D /* Network */,
+				E4B9C15308417B25B7712E49 /* Security */,
+				4F3856904F010BAB651506BE /* Storage */,
+			);
+			name = Infra;
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		6E697C874323BC84F54AB84D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FB57EF7B19D9B430E0FC6E70 /* OCBAPIResponseMapper.h */,
+				EB2EFD3821DEC4BA289BB591 /* OCBAPIResponseMapper.m */,
+				2D8FCC5D4435D37157CB8390 /* OCBNetworkClient.h */,
+				AF58FECB8A62C066E7975861 /* OCBNetworkClient.m */,
+				7DDE7F55764570B701B4CA8F /* OCBNetworkError.h */,
+				DC529315A5249BAFB484B587 /* OCBNetworkError.m */,
+				1F146158F939049666A905C4 /* OCBNetworkResponse.h */,
+				5167855A649B8F84C509322A /* OCBNetworkResponse.m */,
+				8A8417CE9B6C5E0B9095C4A6 /* OCBRequest.h */,
+				0A6B620A50D1ACE61DDC037B /* OCBRequest.m */,
+			);
+			name = Network;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		75562C6ADB26A9FD1BB729DE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B0D4660DAB9210EAA23C62B1 /* OCBHomeViewController.h */,
+				F0F230B5DF4F91B7E6DC3946 /* OCBHomeViewController.m */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7762A22435614F5FDBB20C9D /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				D451D410D818B9CFCF496695 /* OCBThemeManager.h */,
+				8C6F15ABFF04C72C0FC12AD6 /* OCBThemeManager.m */,
+			);
+			name = Theme;
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		8CCF781C19BCDC46F264C0C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E2159A5397FB1BD0C4E6E1 /* Pods-OCAppBox.release.xcconfig */,
+				64BE050B60D05EE9ED4E558B /* Pods-OCAppBox.debug.xcconfig */,
+				E82C839A0CEBA3B9712561FB /* Pods-OCAppBoxTests.release.xcconfig */,
+				68964ED1266C14AECE3E8911 /* Pods-OCAppBoxTests.debug.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DEBF0463E68614A4F1F87F6 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8FC91880816C4071B2134C7 /* OCBBaseModel.h */,
+				439DEB6F099D63612411F106 /* OCBBaseModel.m */,
+			);
+			name = BaseModel;
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		93E3FAD124C91B90A2149B80 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				37AE4413D0C8F38964E5643B /* OCBAppContext.h */,
+				618C844FEA8DFACAC2C1D9B9 /* OCBAppContext.m */,
+				175E28F8FBD7FBD7282120AB /* OCBAutoRegister.h */,
+				88C3C7FC922C07CB59646EE3 /* OCBAutoRegister.m */,
+				91E61BBC60CD9A38C1643813 /* OCBLaunchTask.h */,
+				42C4336E6BC44DC87AA9EC9F /* OCBModuleManager.h */,
+				9D3C3065B8F5753F286FD32F /* OCBModuleManager.m */,
+				8925A228528CBF1AAD417D89 /* OCBModuleProtocol.h */,
+				305EA887FB65D6BBA48F4DED /* OCBRouter.h */,
+				65D8946CB21631EA76ACBE8E /* OCBRouter.m */,
+				39E083F8D7918E120BA00465 /* OCBServiceRegistry.h */,
+				BB3E494421A95CC21088DCCB /* OCBServiceRegistry.m */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		951E41B3DD74935466DADC3B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8DEBF0463E68614A4F1F87F6 /* BaseModel */,
+				3AECEFA926648B8F5A39D701 /* Category */,
+				A9D3F0278692756D4E19FF60 /* Macro */,
+				CCF0840A34BC7F8C72ACF513 /* Util */,
+			);
+			name = Foundation;
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		9ABF007F29D369B3D6CFE919 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BFCC60FBD05A8A26B9FF6300 /* OCBAppContextTests.m */,
+				8ED7300351C25BA22B92BE2E /* OCBBaseAPIServiceTests.m */,
+				7290F59F1A6792F99D2FB648 /* OCBBaseModelTests.m */,
+				448786E54E0925A9D41E8B27 /* OCBCacheCenterTests.m */,
+				A762A658F5534FF7B2B2F2D3 /* OCBConfigCenterTests.m */,
+				CD985664ECE3833CA016191B /* OCBDemoAppLauncherTests.m */,
+				C3A9BA6AD441439F53DB4123 /* OCBFoundationTests.m */,
+				A7F9E219D09E6798FB995AD1 /* OCBKeychainStoreTests.m */,
+				BC4B7D5100428B6491AF05E8 /* OCBModuleManagerTests.m */,
+				2EA8748C0D44AF7F066097F3 /* OCBNetworkClientTests.m */,
+				18E20BD4406F44A1BEB9E3B2 /* OCBNetworkResponseTests.m */,
+				29098DE1B7915817AE390743 /* OCBRouterTests.m */,
+				E95DE3388B35299B7080D20F /* OCBServiceRegistryTests.m */,
+				DAE8C69266F3431F7052B545 /* OCBStarterAppConfigurationTests.m */,
+				8401B17EC8B32395CF0B047A /* OCBUIBaseControllerTests.m */,
+			);
+			name = Tests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A33D377A17A513BB5E18BF0D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B0662A0C6CC9D4B0210F5E0E /* OCBUserSession.h */,
+				CFE7E0937436E896664DF567 /* OCBUserSession.m */,
+				18CCED7F2C4740B37367D0CE /* OCBUserSessionService.h */,
+				6D07231A8D44BA1FE25AA332 /* OCBUserSessionService.m */,
+			);
+			name = User;
+			path = User;
+			sourceTree = "<group>";
+		};
+		A42AB96165DAE9199C6BE6DF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D1AAFEEC906A9312A4085BF3 /* OCBRemoteConfigService.h */,
+				E0C71710B12976FD68487FB8 /* OCBRemoteConfigService.m */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A9D3F0278692756D4E19FF60 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				7F63E908B3721E440847985E /* OCBFoundationMacros.h */,
+			);
+			name = Macro;
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		AE9FA6E9DA7772FFBBE51C1F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7DB321D27BA7F0ED13D518BC /* OCBDebugPanelViewController.h */,
+				ABDBAA993751F651FB744797 /* OCBDebugPanelViewController.m */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AFDFB983D1CA914A997BA94B = {
+			isa = PBXGroup;
+			children = (
+				F05D3DB5D51C39680B4504A9 /* Products */,
+				2BCEE431581CE9B9FE52935A /* Frameworks */,
+				C514C903BB7A24E57FDE2078 /* App */,
+				9ABF007F29D369B3D6CFE919 /* Tests */,
+				8CCF781C19BCDC46F264C0C4 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B05688F3C288DB909261F24B /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				B4BE30C835ABAF7F5B6B764C /* OCBDemoAppLauncher.h */,
+				2E9C61CE83DF816A8BC30F28 /* OCBDemoAppLauncher.m */,
+				AF893602BD0FD4A990C8B2A8 /* OCBDemoRouteCatalog.h */,
+				1C415DA9017F6AB91D95036E /* OCBDemoRouteCatalog.m */,
+				344A904750A7CFA279317DFB /* OCBStarterAppConfiguration.h */,
+				E615B181C6DFCE8C4EAE487D /* OCBStarterAppConfiguration.m */,
+			);
+			name = Host;
+			path = Host;
+			sourceTree = "<group>";
+		};
+		B5702DC1FB7FA735CEC128EF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2297D8E4BBEBC48A281C392C /* OCBConfigCenter.h */,
+				D97A1A2B1E532ED679A0A91F /* OCBConfigCenter.m */,
+			);
+			name = Config;
+			path = Config;
+			sourceTree = "<group>";
+		};
+		C514C903BB7A24E57FDE2078 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EFC65E3C1CB1F6FDD78AA9AE /* AppDelegate.h */,
+				7D2334F40B2E028627023209 /* AppDelegate.m */,
+				93E3FAD124C91B90A2149B80 /* Core */,
+				951E41B3DD74935466DADC3B /* Foundation */,
+				B05688F3C288DB909261F24B /* Host */,
+				7EB261B8B0FF3444ECA24C89 /* Info.plist */,
+				6B0F3EC1819BC113CEF929A7 /* Infra */,
+				2AE080B73F18AD39F4A10610 /* LaunchScreen.storyboard */,
+				5880BD7E5EB2B7E45479DE91 /* Module */,
+				AECF46CE0DE94D9999E33E7F /* OCAppBox.h */,
+				5A9E7B7FFE9031BB6155FDEF /* Service */,
+				D9D0C7F49E0E2AAE9B26EB6A /* Support */,
+				1E1BD2B40857B9496774B944 /* UI */,
+				476BFB50406F8488B0C6B642 /* main.m */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		CCF0840A34BC7F8C72ACF513 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F20922E757E0C6EA25AD3ED0 /* OCBAppMetadata.h */,
+				EAEBB77D1A2224EA77FCF8DB /* OCBAppMetadata.m */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D1CE6B711B18361413A97088 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0D01FF1B1E4FC40CC3CB5F4E /* OCBAccountViewController.h */,
+				1C95DAE625C6AB364BA6073D /* OCBAccountViewController.m */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D9D0C7F49E0E2AAE9B26EB6A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EE338D3328623430DE13413A /* Debug */,
+			);
+			name = Support;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E4B9C15308417B25B7712E49 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				04C26A982B3E89F3BACF787B /* OCBKeychainStore.h */,
+				8B35B685A3191882B273CBBE /* OCBKeychainStore.m */,
+			);
+			name = Security;
+			path = Security;
+			sourceTree = "<group>";
+		};
+		EE338D3328623430DE13413A /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				CE02088CB4DF7B16B37FAA12 /* OCBDebugPanelModule.h */,
+				90DE72C7A862A5A3908B13B5 /* OCBDebugPanelModule.m */,
+				AE9FA6E9DA7772FFBBE51C1F /* UI */,
+			);
+			name = Debug;
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		F05D3DB5D51C39680B4504A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87E2F6F5C35CD75498E68E35 /* OCAppBox.app */,
+				7BE85D50BFC3B7D4A9CE39DB /* OCAppBoxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58A389F3BFDEF6D22CC72968 /* OCAppBox */ = {
+		25B4EB6AEC38471ABFA261C4 /* OCAppBoxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC0EEF2FFEA9F4BD0674A66 /* Build configuration list for PBXNativeTarget "OCAppBox" */;
+			buildConfigurationList = 9DE32035ADF2AB26A0A19753 /* Build configuration list for PBXNativeTarget "OCAppBoxTests" */;
 			buildPhases = (
-				8019D31F9F45B8B7D6E6CEB0 /* [CP] Check Pods Manifest.lock */,
-				348FF5C3290760351E4F4358 /* Sources */,
-				2963936482905C9BD13B70D4 /* Frameworks */,
-				5A0E7A184AC8069E1CAE2ED9 /* Resources */,
+				81C09F43E3222620318B0784 /* [CP] Check Pods Manifest.lock */,
+				2B80BB0EA082AB7699DE90BC /* Sources */,
+				B2FE5F6617B935C1074FDE95 /* Frameworks */,
+				9E32FE8CEC8B0A81E766557C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94179B1456E1CCB252925666 /* PBXTargetDependency */,
+			);
+			name = OCAppBoxTests;
+			productName = OCAppBoxTests;
+			productReference = 7BE85D50BFC3B7D4A9CE39DB /* OCAppBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A83EAFA15DC69B5605D023A9 /* OCAppBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DFD24E4C37C59D958D1939D /* Build configuration list for PBXNativeTarget "OCAppBox" */;
+			buildPhases = (
+				B45110056CECE9EF1A74A1CC /* [CP] Check Pods Manifest.lock */,
+				E6D0215D6CC70BE4999D0105 /* Sources */,
+				79C30E27632C120752A31BDE /* Frameworks */,
+				1520D91D96DFFB928627BB08 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -714,38 +788,19 @@
 			);
 			name = OCAppBox;
 			productName = OCAppBox;
-			productReference = 5C62512A9D17DF5E63161761 /* OCAppBox.app */;
+			productReference = 87E2F6F5C35CD75498E68E35 /* OCAppBox.app */;
 			productType = "com.apple.product-type.application";
-		};
-		6DBDD870B0A9C374730BED9E /* OCAppBoxTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AD1B76C78540362628D4D7BA /* Build configuration list for PBXNativeTarget "OCAppBoxTests" */;
-			buildPhases = (
-				935E4E3170E4862BB635C607 /* [CP] Check Pods Manifest.lock */,
-				70A9A1294718F77AFB4BD9D6 /* Sources */,
-				225661033824B805F270BBD3 /* Frameworks */,
-				3648239616FA5167637E977B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				65504373F16C2FCF7ED379BC /* PBXTargetDependency */,
-			);
-			name = OCAppBoxTests;
-			productName = OCAppBoxTests;
-			productReference = 88B8ACB96F6FE54E015742C1 /* OCAppBoxTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		74E75C3DB88BB6F3957976B1 /* Project object */ = {
+		7B27D4D9454229034F5F8485 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 184581FB6A3F6EE8B69AB382 /* Build configuration list for PBXProject "OCAppBox" */;
+			buildConfigurationList = 0CC1507B878A6B513A61ACFF /* Build configuration list for PBXProject "OCAppBox" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -753,61 +808,39 @@
 				en,
 				Base,
 			);
-			mainGroup = 92D9DC619E293467E3523DD8;
+			mainGroup = AFDFB983D1CA914A997BA94B;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 06F88BBD5E0363BD6FFF3777 /* Products */;
+			productRefGroup = F05D3DB5D51C39680B4504A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58A389F3BFDEF6D22CC72968 /* OCAppBox */,
-				6DBDD870B0A9C374730BED9E /* OCAppBoxTests */,
+				A83EAFA15DC69B5605D023A9 /* OCAppBox */,
+				25B4EB6AEC38471ABFA261C4 /* OCAppBoxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3648239616FA5167637E977B /* Resources */ = {
+		1520D91D96DFFB928627BB08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ACA68296F898B4D5C805B4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A0E7A184AC8069E1CAE2ED9 /* Resources */ = {
+		9E32FE8CEC8B0A81E766557C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64B7D14721E47FABA7FB0943 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8019D31F9F45B8B7D6E6CEB0 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OCAppBox-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		935E4E3170E4862BB635C607 /* [CP] Check Pods Manifest.lock */ = {
+		81C09F43E3222620318B0784 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -829,98 +862,238 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B45110056CECE9EF1A74A1CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCAppBox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		348FF5C3290760351E4F4358 /* Sources */ = {
+		2B80BB0EA082AB7699DE90BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F99337B28295D1E352882E2A /* AppDelegate.m in Sources */,
-				5B814068F025087CDD9E871C /* OCBAppContext.m in Sources */,
-				D79F5DF902D441FBB6C6B99A /* OCBAutoRegister.m in Sources */,
-				451E39A5D3CB7CFEFFDAE43C /* OCBModuleManager.m in Sources */,
-				452D9618DAFBDBC8D25C6CE1 /* OCBRouter.m in Sources */,
-				4AD2B28CCEC2AEDEBCF281B1 /* OCBServiceRegistry.m in Sources */,
-				1483ABDAD496735806475088 /* NSArray+OCBAdditions.m in Sources */,
-				7ABBF0B06F5135876D68ABB4 /* NSDictionary+OCBAdditions.m in Sources */,
-				3A6704CAE205AC7387B3D2CB /* NSString+OCBAdditions.m in Sources */,
-				AF467EB50E42F7854F2631AC /* UIColor+OCBAdditions.m in Sources */,
-				1945AC7631A7161ACF35B72F /* UIView+OCBAdditions.m in Sources */,
-				40E412986C8A8A0E9A0435F6 /* OCBAppMetadata.m in Sources */,
-				D0B6C18BEC4CFC7881939778 /* OCBDemoAppLauncher.m in Sources */,
-				460231030202088A1C96C494 /* OCBDemoRouteCatalog.m in Sources */,
-				A1840C70F7721A47328C4E4D /* OCBStarterAppConfiguration.m in Sources */,
-				2967534655A28E8C6A3E4B82 /* OCBLogger.m in Sources */,
-				ABB6245358A4ED086C032FA7 /* OCBAPIResponseMapper.m in Sources */,
-				6A63E4A2D69C162773928496 /* OCBNetworkClient.m in Sources */,
-				550F1BC6573591630BFDEC12 /* OCBNetworkError.m in Sources */,
-				9F3FEF2B09480E1A3A9D27CF /* OCBNetworkResponse.m in Sources */,
-				87EB15331A025B0C1EA85C0E /* OCBRequest.m in Sources */,
-				D9FC26D74BBBB2B8FEF32D79 /* OCBCacheCenter.m in Sources */,
-				36387BAA66B12D23FFE6FB65 /* OCBAccountBootstrapTask.m in Sources */,
-				893A584E280221F2D03BC1E6 /* OCBAccountModule.m in Sources */,
-				7F29C6840A705E46986145F5 /* OCBAccountViewController.m in Sources */,
-				A1F81130E8F1A6C862D4A338 /* OCBHomeBootstrapTask.m in Sources */,
-				95201BF919E3F59532417FA5 /* OCBHomeModule.m in Sources */,
-				FD070430123F975A03E361E6 /* OCBHomeViewController.m in Sources */,
-				1E95885D24628850F8E263F6 /* OCBProfileBootstrapTask.m in Sources */,
-				5C569F79572B9213F792E513 /* OCBProfileModule.m in Sources */,
-				B586EFB619115B639893D578 /* OCBProfileViewController.m in Sources */,
-				87B70931C42B7D3AB8CE2C56 /* OCBAuthService.m in Sources */,
-				5CB6FDF89BBA4B106A5CF399 /* OCBBaseAPIService.m in Sources */,
-				A0724C370013266F98B55F81 /* OCBRemoteConfigService.m in Sources */,
-				B9CAFCD3EF4BA1CD352CDC62 /* OCBPermissionService.m in Sources */,
-				5CF5769B2131A35401F44972 /* OCBUserSession.m in Sources */,
-				E892220188A5486EE82DA2C4 /* OCBUserSessionService.m in Sources */,
-				66996FB589FD807F9298372A /* OCBDebugPanelModule.m in Sources */,
-				4B1FF66B4AC5B3CD03AEDCDE /* OCBDebugPanelViewController.m in Sources */,
-				B1FE492430DCAE78283BC710 /* OCBBaseCollectionViewController.m in Sources */,
-				E4E8910F7E59E01963FFDF4C /* OCBBaseTableViewController.m in Sources */,
-				9A62989EBAA3DDE1ED5C8E94 /* OCBBaseViewController.m in Sources */,
-				75556F3170F35B63F94ED780 /* OCBNavController.m in Sources */,
-				2347D4CC4776F04456D1B6A9 /* OCBTabBarController.m in Sources */,
-				34F1FC44BC6949FE417ED046 /* OCBTabBarItemDescriptor.m in Sources */,
-				A13FA34E518993CEC4AE6D64 /* OCBEmptyStateView.m in Sources */,
-				EF06428B4799F42437439BE2 /* OCBLoadingView.m in Sources */,
-				88C3D6E0C2E7734A9F5CBB5E /* OCBToast.m in Sources */,
-				D952C50DF4CBD2E51F1D122A /* OCBThemeManager.m in Sources */,
-				DD996F3F215AB65CFEFB60C9 /* main.m in Sources */,
+				BD1A874EB28B0F2591F22B8D /* OCBAppContextTests.m in Sources */,
+				7B23B3FD874033054AFB3671 /* OCBBaseAPIServiceTests.m in Sources */,
+				42F5D41828C12763BEA3DB29 /* OCBBaseModelTests.m in Sources */,
+				4D9CC4E35E6F816B527D6AF9 /* OCBCacheCenterTests.m in Sources */,
+				4DAEF880ECE97A03042B95C7 /* OCBConfigCenterTests.m in Sources */,
+				24B6B7A1C54F58B5FC9CBFDD /* OCBDemoAppLauncherTests.m in Sources */,
+				13078E2017D893E842A36861 /* OCBFoundationTests.m in Sources */,
+				4E3767F6FACC13C72F72DF84 /* OCBKeychainStoreTests.m in Sources */,
+				E5FE96927B938E74FBB8D1A8 /* OCBModuleManagerTests.m in Sources */,
+				DD0C3E7EE6CDACE0E1A649FD /* OCBNetworkClientTests.m in Sources */,
+				ADCF97B48C497EA3D5D4F65B /* OCBNetworkResponseTests.m in Sources */,
+				5CF96A69D0A36422C34B65B8 /* OCBRouterTests.m in Sources */,
+				722FACEF76AA18F8B41CCA45 /* OCBServiceRegistryTests.m in Sources */,
+				C8B35806ACE5D9C2A2FA928C /* OCBStarterAppConfigurationTests.m in Sources */,
+				4F00951F073B40CFADCBC25D /* OCBUIBaseControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70A9A1294718F77AFB4BD9D6 /* Sources */ = {
+		E6D0215D6CC70BE4999D0105 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2197162BD61091F1CB143597 /* OCBAppContextTests.m in Sources */,
-				2116817DB8EFD1877835B331 /* OCBBaseAPIServiceTests.m in Sources */,
-				67CE6847475A4B62B00FAE8F /* OCBCacheCenterTests.m in Sources */,
-				D26D425B861510E7D0E80B8D /* OCBDemoAppLauncherTests.m in Sources */,
-				5EA0136218EC34C6DF96A8EB /* OCBFoundationTests.m in Sources */,
-				2A031F7A373F4E58FB8B722C /* OCBModuleManagerTests.m in Sources */,
-				563AF9B2672300EE582AC588 /* OCBNetworkClientTests.m in Sources */,
-				2CE5C316324CDD52E89A2012 /* OCBNetworkResponseTests.m in Sources */,
-				E88304261D8E52622A249AD8 /* OCBRouterTests.m in Sources */,
-				F9AFA8A7E4C8B82C265AB2DA /* OCBServiceRegistryTests.m in Sources */,
-				31050F1E395A7D23F8B3C453 /* OCBStarterAppConfigurationTests.m in Sources */,
-				83DE5C8A6B7F9C4471B1ABAF /* OCBUIBaseControllerTests.m in Sources */,
+				0E6FF7B646A19819DF6C9AB5 /* AppDelegate.m in Sources */,
+				684ABBF292CB61EDE228C0FD /* OCBAppContext.m in Sources */,
+				7DFD19A148CF2FEAB6CDF1FE /* OCBAutoRegister.m in Sources */,
+				1313F8CCBF26DB3FECA01F3E /* OCBModuleManager.m in Sources */,
+				5D051C35F1B7E1FC87B22A76 /* OCBRouter.m in Sources */,
+				9A3C9B6FD5CF769041CA31E8 /* OCBServiceRegistry.m in Sources */,
+				169B44C4B611CF1E345E4E7B /* OCBBaseModel.m in Sources */,
+				427830C2C0E8071347C7EAAA /* NSArray+OCBAdditions.m in Sources */,
+				848B56EC9E881C62E5B9385C /* NSDictionary+OCBAdditions.m in Sources */,
+				EF53B0E4AA5DAF29BF73D666 /* NSString+OCBAdditions.m in Sources */,
+				FA9024363AC671C09053907C /* UIColor+OCBAdditions.m in Sources */,
+				9B179DCE75A26BCCBE89BC0A /* UIView+OCBAdditions.m in Sources */,
+				79EF5D385F45200D58A0B643 /* OCBAppMetadata.m in Sources */,
+				DB9F0AA466EEA2B89B043A14 /* OCBDemoAppLauncher.m in Sources */,
+				8545C0521EE69A84D98641A7 /* OCBDemoRouteCatalog.m in Sources */,
+				0F55345E4D97455A3359D6ED /* OCBStarterAppConfiguration.m in Sources */,
+				8B5D9BAC4F1D7837C47875EC /* OCBConfigCenter.m in Sources */,
+				16BBA247A5DD7842E4600C92 /* OCBLogger.m in Sources */,
+				2E4A135D2ECAC02A5FC5B375 /* OCBAPIResponseMapper.m in Sources */,
+				55F5315201A978EE3C5211B2 /* OCBNetworkClient.m in Sources */,
+				171650AC3450FD9DF4110278 /* OCBNetworkError.m in Sources */,
+				CBDDFD53C0830D3A37A0EC12 /* OCBNetworkResponse.m in Sources */,
+				2E8F2D879B25052CA8BB3D41 /* OCBRequest.m in Sources */,
+				0C095832362D16490D8EED09 /* OCBKeychainStore.m in Sources */,
+				CD04847AD9EB21A3D06A5C0E /* OCBCacheCenter.m in Sources */,
+				1E3DB05F208788331DBE7142 /* OCBAccountBootstrapTask.m in Sources */,
+				24BFF93DC321096A74621B9B /* OCBAccountModule.m in Sources */,
+				46277EE5C64D5B1C0330D1DA /* OCBAccountViewController.m in Sources */,
+				77429FF25DD42B997325F6A8 /* OCBHomeBootstrapTask.m in Sources */,
+				48DDEE895B77844C926CCB3D /* OCBHomeModule.m in Sources */,
+				3BD4A6F20DAD313490BD2DCE /* OCBHomeViewController.m in Sources */,
+				DD577E3EAD71634477A1E1A8 /* OCBProfileBootstrapTask.m in Sources */,
+				AD68ABBBD60364D0230ED347 /* OCBProfileModule.m in Sources */,
+				68C56C885934AC6D2ACECA77 /* OCBProfileViewController.m in Sources */,
+				85724EF8E6B4F736DE97646A /* OCBAuthService.m in Sources */,
+				75EFD499299346A45E851EB2 /* OCBBaseAPIService.m in Sources */,
+				40822D802C5631F1C574B343 /* OCBRemoteConfigService.m in Sources */,
+				579D884DDE1ADF0C4F791C06 /* OCBPermissionService.m in Sources */,
+				509D93479F2E6662D274A5CC /* OCBUserSession.m in Sources */,
+				51D09C6685C20DBA19E769C2 /* OCBUserSessionService.m in Sources */,
+				A18643732D63F261B927421C /* OCBDebugPanelModule.m in Sources */,
+				6867863B2952DDFD16A4E8F9 /* OCBDebugPanelViewController.m in Sources */,
+				84EEBC0B938B0A2C26FF23D5 /* OCBBaseCollectionViewController.m in Sources */,
+				D2B0B611A7CFE53D0CAE6339 /* OCBBaseTableViewController.m in Sources */,
+				929C9A42FF89684D51C34389 /* OCBBaseViewController.m in Sources */,
+				26A56935BCB8326B117367B8 /* OCBNavController.m in Sources */,
+				EB2AD1A32BA3D0A9DEC4C0C3 /* OCBTabBarController.m in Sources */,
+				E5FBBE2D5C812F7B53C87283 /* OCBTabBarItemDescriptor.m in Sources */,
+				532A890E4F944A940DD74B51 /* OCBEmptyStateView.m in Sources */,
+				0446E5D05094D4CCE01D84FD /* OCBLoadingView.m in Sources */,
+				A1C205BBC4E9CAFE3E9D13B1 /* OCBToast.m in Sources */,
+				138FAFB812ACACCA87EFC9D1 /* OCBThemeManager.m in Sources */,
+				C507C5248A85AEAD6C722362 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		65504373F16C2FCF7ED379BC /* PBXTargetDependency */ = {
+		94179B1456E1CCB252925666 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OCAppBox;
-			target = 58A389F3BFDEF6D22CC72968 /* OCAppBox */;
-			targetProxy = D28A95F0C206DA81CC6918F3 /* PBXContainerItemProxy */;
+			target = A83EAFA15DC69B5605D023A9 /* OCAppBox */;
+			targetProxy = 27C0281ACE5DB1D928BF84ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F66EE316FCBAEFCDEACEBD9 /* Debug */ = {
+		1FB2FF252D1BCDD72E466398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68964ED1266C14AECE3E8911 /* Pods-OCAppBoxTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/App",
+					"$(SRCROOT)/App/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCAppBox.app/OCAppBox";
+			};
+			name = Debug;
+		};
+		655FFD46E982CE442BD9F8E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64BE050B60D05EE9ED4E558B /* Pods-OCAppBox.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/App",
+					"$(SRCROOT)/App/**",
+				);
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7624FBA0691F523608B5CA11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E2159A5397FB1BD0C4E6E1 /* Pods-OCAppBox.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/App",
+					"$(SRCROOT)/App/**",
+				);
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8309D47ED5BABB19FFF44816 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82C839A0CEBA3B9712561FB /* Pods-OCAppBoxTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/App",
+					"$(SRCROOT)/App/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCAppBox.app/OCAppBox";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C15DC388D4086569FD93A894 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -981,31 +1154,7 @@
 			};
 			name = Debug;
 		};
-		336EE62C19DE56DBD21D94D3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B89C77E4A41549536213D4AA /* Pods-OCAppBox.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/App",
-					"$(SRCROOT)/App/**",
-				);
-				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		83896E7EC43F038D1EEEACBE /* Release */ = {
+		CFC1613131B2C007C5731BE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1059,125 +1208,37 @@
 			};
 			name = Release;
 		};
-		94DB6748EAC736E600822578 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A126AA4760469C20AF758792 /* Pods-OCAppBoxTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/App",
-					"$(SRCROOT)/App/**",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCAppBox.app/OCAppBox";
-			};
-			name = Debug;
-		};
-		A5C8C3322E1CA9203826E68B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ADC8B95412B47C025EDC4C7 /* Pods-OCAppBoxTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/App",
-					"$(SRCROOT)/App/**",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					XCTest,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox.tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OCAppBox.app/OCAppBox";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DB52D4B8359D4147EBD7F103 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6F738B5BCA3B603F5C22C6D /* Pods-OCAppBox.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_STYLE = Automatic;
-				GENERATE_INFOPLIST_FILE = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/App",
-					"$(SRCROOT)/App/**",
-				);
-				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ocappbox;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		184581FB6A3F6EE8B69AB382 /* Build configuration list for PBXProject "OCAppBox" */ = {
+		0CC1507B878A6B513A61ACFF /* Build configuration list for PBXProject "OCAppBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F66EE316FCBAEFCDEACEBD9 /* Debug */,
-				83896E7EC43F038D1EEEACBE /* Release */,
+				C15DC388D4086569FD93A894 /* Debug */,
+				CFC1613131B2C007C5731BE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DC0EEF2FFEA9F4BD0674A66 /* Build configuration list for PBXNativeTarget "OCAppBox" */ = {
+		4DFD24E4C37C59D958D1939D /* Build configuration list for PBXNativeTarget "OCAppBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				336EE62C19DE56DBD21D94D3 /* Release */,
-				DB52D4B8359D4147EBD7F103 /* Debug */,
+				7624FBA0691F523608B5CA11 /* Release */,
+				655FFD46E982CE442BD9F8E7 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD1B76C78540362628D4D7BA /* Build configuration list for PBXNativeTarget "OCAppBoxTests" */ = {
+		9DE32035ADF2AB26A0A19753 /* Build configuration list for PBXNativeTarget "OCAppBoxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5C8C3322E1CA9203826E68B /* Release */,
-				94DB6748EAC736E600822578 /* Debug */,
+				8309D47ED5BABB19FFF44816 /* Release */,
+				1FB2FF252D1BCDD72E466398 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 74E75C3DB88BB6F3957976B1 /* Project object */;
+	rootObject = 7B27D4D9454229034F5F8485 /* Project object */;
 }
