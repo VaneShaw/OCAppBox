@@ -1,247 +1,271 @@
-# OCAppBox 技术规格说明
+# OCAppBox Starter App 技术规格说明
 
 ## 1. 文档目的
 
-这份文档不是架构畅想，而是面向当前仓库的可执行技术规格。
+这份文档用于约束 `OCAppBox` 这个仓库到底应该是什么，不再按“可复用 SDK / Pod / 示例工程”思路描述，而是按“下载下来直接作为新 App 起步工程”来定义。
 
-主旨只有一个：
+判断标准只有一句话：
 
-`OCAppBox` 必须是一套可以直接拿来起新 App 的 Objective-C starter app，而不是一个还需要二次封装才能落地的半成品框架。
+“把仓库拉下来，执行 `pod install`，打开工程，改一个 `Bundle Identifier`，配一下 `TabBar`，就能直接开始写页面。”
 
-拿到仓库后的标准路径应该是：
+后续所有能力补充，都必须服务这条主线。
+
+## 2. 核心定位
+
+`OCAppBox` 的定位是：
+
+- 一个可直接运行的 Objective-C starter app 仓库
+- 一个新项目的基础工程骨架
+- 一个已经内置必要公共能力的 App 宿主
+
+`OCAppBox` 不是：
+
+- 需要再通过 `pod 'OCAppBox'` 接入自己的框架
+- 外层包一层 `Example`、里层再套 `Sources/Framework` 的演示工程
+- 必须先跑复杂初始化流程才能开始开发的半成品
+
+## 3. 标准使用路径
+
+拿到仓库后的标准路径应该固定为：
 
 1. `git clone`
-2. `pod install`
-3. 打开 `OCAppBox.xcworkspace`
-4. 改 `Bundle Identifier`
-5. 改 `starterTabs`
-6. 生成模块 / 页面 / 服务
-7. 直接开始写业务页面
+2. `cd OCAppBox`
+3. `pod install`
+4. 打开 `OCAppBox.xcworkspace`
+5. 修改 `Bundle Identifier / Team / App 名称`
+6. 修改 `App/Host/OCBStarterAppConfiguration.m`
+7. 配置 `starterTabs`
+8. 直接改现有页面或新增页面开始业务开发
 
-## 2. 目标与非目标
+这里的关键原则是：
 
-### 2.1 目标
+- “直接写页面”必须成立
+- “使用脚手架生成模块 / 页面 / 服务”只是提效方式，不是开始开发的前置条件
 
-- 根目录直接可运行，是一个完整 starter app
-- 统一启动装配、模块接入、服务注册、路由跳转
-- 内置常用宏、分类、基类和基础设施
-- 内置 TabBar 宿主配置入口
-- 内置模块 / 页面 / 服务生成脚手架
-- 业务页面默认具备 loading / empty / error / toast 能力
-- 网络层对业务暴露稳定抽象，不把第三方库泄漏到业务层
-- 研发拿到仓库后，不需要先研究框架拆包流程就能开始开发
+## 4. 硬性验收标准
 
-### 2.2 非目标
+### 4.1 工程形态
 
-- 当前阶段不追求发布成可复用 Pod
-- 当前阶段不追求一次性塞入大量第三方库
-- 当前阶段不追求把所有业务场景都预置到仓库里
-
-## 3. 启动型仓库验收标准
-
-### 3.1 宿主工程
-
+- 根目录必须直接是可开发、可运行的 iOS 工程
 - 根目录必须存在 `OCAppBox.xcodeproj / OCAppBox.xcworkspace / Podfile`
-- `App` 目录即业务源码目录，不允许再套 `Example -> Sources -> Framework`
-- 直接修改 `Bundle Identifier` 后即可运行
+- 业务代码必须集中在 `App` 目录
+- 不允许再出现 `Example -> Sources -> Framework` 这类多层壳结构
+- 下载仓库后，开发者不需要再额外生成宿主工程
 
-### 3.2 启动配置
+### 4.2 第一天可用性
 
-- 必须存在单一入口集中维护启动配置
-- 至少可配置：
+- 新开发者第一次打开仓库，就能直接运行宿主工程
+- 修改 `Bundle Identifier` 后即可作为自己的 App 壳子继续开发
+- 首页启动必须是正常全屏，不允许再出现非全屏或启动配置异常
+- 默认必须带一个可工作的 `TabBar` 宿主
+- 默认必须带若干 starter 页面，方便直接替换内容而不是从空白工程起步
+
+### 4.3 启动配置收口
+
+- 启动相关配置必须集中维护，不能分散在多个入口
+- 至少必须有一处统一维护下列项目：
   - 默认环境
-  - TabBar
+  - `starterTabs`
   - 网络环境 `baseURL`
-  - 公共请求头
-  - API 返回协议映射
+  - 通用请求头
+  - 业务响应解析规则
   - 默认远程配置
 
-### 3.3 通用基础能力
+当前统一入口应为：
 
-- 宏定义：线程切换、weakify/strongify、屏幕尺寸、像素线、安全类型转换
-- 分类扩展：`NSString / NSArray / NSDictionary / UIColor / UIView`
-- 页面基类：`BaseViewController / BaseTableViewController / BaseCollectionViewController`
-- 页面容器必须提供安全区内容视图，避免业务页面反复处理安全区
+- `App/Host/OCBStarterAppConfiguration`
 
-### 3.4 网络与服务
+### 4.4 直接开发入口
 
-- 网络层统一暴露 `OCBRequest / OCBNetworking / OCBNetworkResponse / OCBNetworkError`
-- 必须支持环境化 `baseURL`
-- 必须支持通用业务响应解析
-- 必须同时支持：
-  - 状态型服务生成
-  - 接口型服务生成
+- 开发者不应被迫先理解全部框架细节才能写页面
+- 至少要支持下面两条路径：
+  - 直接修改现有 starter 页面继续开发
+  - 新建页面后挂到 `starterTabs` 中快速接入
+- 业务开发的最低门槛应当是“会改一个 ViewController”
 
-### 3.5 业务接入效率
+### 4.5 基础能力基线
 
-- 必须可以一键生成模块
-- 必须可以一键生成页面
-- 必须可以一键生成服务
-- 新生成页面应默认建立在统一基座上，而不是裸控制器
+仓库必须自带一套足以支撑新项目起步的公共能力，至少包括：
 
-### 3.6 调试与回归
-
-- 至少具备一个调试入口
-- 必须有一条可重复执行的校验脚本
-- 校验脚本必须覆盖构建、测试、依赖安装和脚手架 smoke test
-
-## 4. 分层规格
-
-### 4.1 Host
-
-职责：
-
-- App 启动装配
-- 根控制器安装
-- 启动默认配置注入
-
-当前关键对象：
-
-- `OCBDemoAppLauncher`
-- `OCBDemoRouteCatalog`
-- `OCBStarterAppConfiguration`
-
-### 4.2 Core
-
-职责：
-
-- `OCBAppContext`
-- `OCBModuleManager`
-- `OCBRouter`
-- `OCBServiceRegistry`
-- `OCBAutoRegister`
-
-要求：
-
-- 模块与服务必须通过协议和注册中心解耦
-- 宿主只依赖 `AppContext`、路由和模块自动装配能力
-
-### 4.3 Foundation
-
-职责：
-
-- 宏
-- 分类
-- 工具类
-
-要求：
-
-- 只放高复用、低业务耦合能力
-- 不放页面逻辑
-- 分类命名统一 `OCBAdditions`
-
-### 4.4 Infra
-
-职责：
-
-- 网络
-- 存储
-- 日志
-
-要求：
-
-- 对业务暴露稳定抽象
-- 第三方库只能封装在内部
-
-### 4.5 UI
-
-职责：
-
+- 常用宏定义
+  - 线程切换
+  - `weakify / strongify`
+  - 屏幕尺寸
+  - 像素线
+  - 安全类型转换
+- 常用分类扩展
+  - `NSString`
+  - `NSArray`
+  - `NSDictionary`
+  - `UIColor`
+  - `UIView`
 - 页面基类
-- 通用容器
-- 主题
-- 空态 / Loading / Toast
+  - `OCBBaseViewController`
+  - `OCBBaseTableViewController`
+  - `OCBBaseCollectionViewController`
+- 页面状态能力
+  - loading
+  - empty
+  - error
+  - toast
+- 页面安全区容器
+  - 业务页面应优先往 `contentView` 放内容，而不是每页重复处理安全区
 
-要求：
+### 4.6 TabBar 快速装配
 
-- `BaseViewController` 必须提供安全区内容容器
-- 列表基类默认带下拉刷新能力
+- 必须存在一处直接配置 `TabBar` 的 API
+- 每个 tab 至少可以声明：
+  - 标题
+  - 路由或页面入口
+  - 图标
+- 增加一个 tab 的复杂度应控制在“新增页面 + 配一条 tab 描述”
 
-### 4.6 Service
+### 4.7 网络与服务
 
-职责：
+- 网络层必须有统一抽象，业务层不能直接依赖第三方网络库
+- 必须支持环境化 `baseURL`
+- 必须支持公共请求头
+- 必须支持业务响应统一映射
+- 服务层必须至少满足：
+  - 状态型服务
+  - 接口型服务
 
-- 横向业务公共服务
+### 4.8 第三方库策略
 
-要求：
-
-- 状态型服务面向配置、状态中心
-- 接口型服务面向网络请求封装
-
-### 4.7 Module
-
-职责：
-
-- 业务模块容器
-- 模块启动任务
-- 页面路由注册
-
-要求：
-
-- 每个模块目录独立
-- 对外通过 `Module + BootstrapTask + Route` 接入
-
-## 5. 第三方库策略
-
-当前仓库目标不是“预装越多越好”，而是“保证 starter app 最小可用并且不臃肿”。
+- `Podfile` 中应预置 starter app 必要的第三方库
+- 这些库应该是“多数项目都会立刻用到”的基础依赖，而不是大而全堆砌
+- 与依赖相关的兼容性修正应尽量沉淀在仓库自身的 `Podfile / post_install` 中
+- 新项目使用这个仓库时，不应再重复手写这些基础依赖配置
 
 当前基线：
 
 - `AFNetworking`
 
-使用原则：
+### 4.9 调试与校验
 
-- 框架层只内聚少量、稳定、通用的底层库
-- 不预置强业务倾向的组件库
-- 新库进入前必须满足：
-  - 多项目高频复用
-  - 与 starter app 目标直接相关
-  - 不引入明显的升级/维护负担
+- 至少应内置一个调试入口
+- 必须存在一条可重复执行的校验脚本
+- 校验脚本至少应覆盖：
+  - 依赖安装
+  - 工程构建
+  - 单元测试
+  - 模块 / 页面 / 服务脚手架 smoke test
 
-## 6. 当前仓库对照结果
+## 5. 目录与分层约束
 
-### 6.1 已完成
+当前仓库推荐目录应保持清晰、直观，不再引入“框架包裹感”。
 
-- 根目录 starter app 结构
-- `Bundle ID` 可直接修改
-- `OCBStarterAppConfiguration` 启动配置收口
-- `TabBar` 快速配置
-- 模块 / 页面 / 服务生成器
-- `state / api` 两类服务脚手架
-- 网络环境与业务响应映射
-- `UIView` 通用扩展
-- `BaseViewController.contentView`
-- 新页面模板接入 `contentView`
-- 调试面板
-- `validate_project.sh`
+```text
+OCAppBox
+├── App
+│   ├── Host
+│   ├── Core
+│   ├── Foundation
+│   ├── Infra
+│   ├── Module
+│   ├── Service
+│   ├── Support
+│   └── UI
+├── Tests
+├── Podfile
+├── OCAppBox.xcodeproj
+├── OCAppBox.xcworkspace
+├── Scripts
+├── Templates
+└── docs
+```
 
-### 6.2 本轮已补能力
+分层要求如下：
 
-- 新建正式技术规格文档
-- 补 `UIView` 通用扩展
-- 补 `BaseViewController.contentView`
-- 把新页面模板切到 `contentView`
+- `Host`
+  - 负责 App 启动、根控制器安装、启动配置注入
+- `Core`
+  - 负责 `AppContext`、模块管理、路由、服务注册
+- `Foundation`
+  - 负责宏、分类、工具类
+- `Infra`
+  - 负责网络、存储、日志等底层能力
+- `UI`
+  - 负责页面基类、容器、主题、通用状态视图
+- `Service`
+  - 负责横向公共服务与接口封装
+- `Module`
+  - 负责业务模块组织与路由接入
+- `Support`
+  - 负责调试、开发辅助能力
 
-### 6.3 后续仍建议继续补
+## 6. 脚手架定位
 
-- 埋点基础抽象
-- Keychain / 安全存储
-- 路由常量生成辅助
+仓库可以提供脚手架，但脚手架的定位必须明确：
+
+- 是提效工具
+- 不是使用门槛
+- 不应该让用户误以为必须先“生成一个 App”才能开始开发
+
+因此：
+
+- `generate_module.rb` 用于快速生成业务模块骨架
+- `generate_page.rb` 用于快速生成页面骨架
+- `generate_service.rb` 用于快速生成服务骨架
+
+但即使完全不使用这些脚本，仓库也必须仍然可以直接开发。
+
+## 7. 当前仓库应满足的实际开发体验
+
+对使用者来说，仓库需要提供的体验应该是：
+
+1. 打开工程能直接跑起来
+2. 改 `Bundle Identifier` 后就是自己的 App
+3. 改 `starterTabs` 就能得到自己的底部导航结构
+4. 直接改 `Home / Profile / Account` 之类的 starter 页面就能开始做业务
+5. 如果嫌手写重复，再选择用脚手架提效
+
+这意味着文档、代码和目录都要围绕“直接开工”设计，而不是围绕“展示框架概念”设计。
+
+## 8. 当前仓库完成度对照
+
+### 8.1 已满足
+
+- 根目录已是 starter app 结构
+- `App` 已作为主业务目录
+- `Podfile` 已内置基础依赖入口
+- `Bundle Identifier` 可直接修改
+- `LaunchScreen` 已接入，启动为全屏形态
+- `OCBStarterAppConfiguration` 已作为启动配置收口
+- `starterTabs` 已可直接配置
+- 已内置 starter 模块与页面
+- 已具备宏、分类、页面基类、网络基座、调试面板
+- 已提供模块 / 页面 / 服务脚手架
+- 已提供 `validate_project.sh`
+
+### 8.2 后续补齐建议
+
+后续继续补能力时，优先补“多数 App 起步就会遇到的共性能力”，而不是继续扩概念。
+
+优先级建议：
+
+- Keychain / 安全存储封装
+- 埋点 / tracking 抽象
+- 路由常量与业务路由组织规范
 - 主题 token 进一步结构化
-- 更明确的业务模块示例链路
+- 一条完整的业务示例链路
+  - 页面
+  - service
+  - network
+  - loading / empty / error
 
-## 7. 开发约定
+## 9. 开发约定
 
-- 页面开发优先使用 `contentView`
-- 业务请求优先继承 `OCBBaseAPIService`
-- 业务状态服务优先使用 `generate_service.rb --kind state`
-- 接口服务优先使用 `generate_service.rb --kind api`
-- 新页面、新模块、新服务落地后优先跑 `bash Scripts/validate_project.sh`
+- 页面开发优先继承基类，不建议直接从裸 `UIViewController` 起步
+- 页面布局优先放到 `contentView`
+- 网络请求优先通过统一服务层封装
+- 能直接写页面时，不要为了“符合架构”而强行增加中间层
+- 新增模块、页面、服务后，优先执行 `bash Scripts/validate_project.sh`
 
-## 8. 结论
+## 10. 结论
 
-判断这个仓库是否达标，不看它有多少概念，而看它能不能满足下面这句话：
+从现在开始，`OCAppBox` 的技术规格以“starter app 可直接落地”为唯一主线。
 
-“下载下来，改一个 Bundle ID，配一下 TabBar，就能直接开始开发业务页面。”
+如果某项设计不能让下面这句话更成立，它就不是优先项：
 
-后续所有补充，都应该围绕这句话做增量建设。
+“下载仓库，安装依赖，改一个 Bundle ID，配一下 TabBar，直接开始开发页面。”
