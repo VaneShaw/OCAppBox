@@ -102,11 +102,22 @@ ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule Feed --type plain --output
 ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule FeedTable --type table --output "$TMP_ROOT/Page/Table"
 ruby "$ROOT_DIR/Scripts/generate_page.rb" SmokeModule FeedGrid --type collection --output "$TMP_ROOT/Page/Collection"
 
+TMP_ROUTE_HEADER="$TMP_ROOT/Route/OCBDemoRouteCatalog.h"
+TMP_ROUTE_IMPL="$TMP_ROOT/Route/OCBDemoRouteCatalog.m"
+mkdir -p "$(dirname "$TMP_ROUTE_HEADER")"
+printf '%s\n' '#import <Foundation/Foundation.h>' '' 'NS_ASSUME_NONNULL_BEGIN' '' 'NS_ASSUME_NONNULL_END' > "$TMP_ROUTE_HEADER"
+printf '%s\n' '#import "OCBDemoRouteCatalog.h"' > "$TMP_ROUTE_IMPL"
+ruby "$ROOT_DIR/Scripts/generate_route.rb" SmokeModule Feed \
+  --header "$TMP_ROUTE_HEADER" \
+  --impl "$TMP_ROUTE_IMPL"
+
 test -f "$TMP_ROOT/Service/Smoke/OCBSmokeServiceService.m"
 test -f "$TMP_ROOT/APIService/API/OCBFeedService.h"
 test -f "$TMP_ROOT/APIService/API/OCBFeedService.m"
 test -f "$TMP_ROOT/Page/Plain/OCBSmokeModuleFeedViewController.m"
 test -f "$TMP_ROOT/Page/Table/OCBSmokeModuleFeedTableViewController.m"
 test -f "$TMP_ROOT/Page/Collection/OCBSmokeModuleFeedGridViewController.m"
+grep -q 'OCBDemoRouteSmokeModuleFeed' "$TMP_ROUTE_HEADER"
+grep -q 'ocb://smoke_module/feed' "$TMP_ROUTE_IMPL"
 
 echo "Validation passed."

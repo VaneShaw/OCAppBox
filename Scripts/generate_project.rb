@@ -26,7 +26,7 @@ def add_directory_entries(group:, directory_path:, target:)
     case File.extname(entry)
     when '.m'
       target.add_file_references([file_ref])
-    when '.storyboard'
+    when '.storyboard', '.strings'
       target.resources_build_phase.add_file_reference(file_ref, true)
     end
   end

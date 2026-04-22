@@ -196,4 +196,34 @@
     [self waitForExpectations:@[expectation] timeout:1.0];
 }
 
+- (void)testBaseAPIServiceSupportsPaginationRequestHelper
+{
+    self.networkingService.nextResponse = [[OCBNetworkResponse alloc] initWithRequestIdentifier:@"request-4"
+                                                                                     statusCode:200
+                                                                                        headers:nil
+                                                                                 responseObject:@{
+        @"code": @0,
+        @"data": @[]
+    }
+                                                                                        rawData:nil];
+    OCBFeedAPIService *service = [[OCBFeedAPIService alloc] initWithAppContext:self.appContext];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"pagination request"];
+
+    [service GET:@"/feed/list"
+            page:2
+        pageSize:20
+      parameters:@{@"channel": @"all"}
+      completion:^(id  _Nullable data, OCBNetworkResponse * _Nullable response, NSError * _Nullable error) {
+        XCTAssertNil(error);
+        XCTAssertNotNil(response);
+        [expectation fulfill];
+    }];
+
+    [self waitForExpectations:@[expectation] timeout:1.0];
+    XCTAssertEqualObjects(self.networkingService.lastRequest.path, @"/feed/list");
+    XCTAssertEqualObjects(self.networkingService.lastRequest.parameters[@"page"], @2);
+    XCTAssertEqualObjects(self.networkingService.lastRequest.parameters[@"page_size"], @20);
+    XCTAssertEqualObjects(self.networkingService.lastRequest.parameters[@"channel"], @"all");
+}
+
 @end

@@ -28,4 +28,26 @@
     return self.ocb_trimmedString.length > 0;
 }
 
+- (NSString *)ocb_urlEncodedString
+{
+    NSCharacterSet *allowedCharacterSet = [[NSCharacterSet characterSetWithCharactersInString:@":#[]@!$&'()*+,;="] invertedSet];
+    NSString *encodedString = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacterSet];
+    return encodedString ?: self;
+}
+
+- (nullable NSDictionary *)ocb_JSONDictionaryObject
+{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    if (data.length == 0) {
+        return nil;
+    }
+
+    NSError *error = nil;
+    id object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    if (error != nil || ![object isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+    return object;
+}
+
 @end

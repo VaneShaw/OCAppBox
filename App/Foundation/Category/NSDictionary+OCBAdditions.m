@@ -106,6 +106,26 @@
     return defaultValue;
 }
 
+- (double)ocb_doubleForKey:(id)key defaultValue:(double)defaultValue
+{
+    id value = self[key];
+    if ([value respondsToSelector:@selector(doubleValue)]) {
+        return [value doubleValue];
+    }
+
+    return defaultValue;
+}
+
+- (double)ocb_doubleForKeyPath:(nullable NSString *)keyPath defaultValue:(double)defaultValue
+{
+    id value = [self ocb_objectForKeyPath:keyPath];
+    if ([value respondsToSelector:@selector(doubleValue)]) {
+        return [value doubleValue];
+    }
+
+    return defaultValue;
+}
+
 - (nullable NSDictionary *)ocb_dictionaryForKey:(id)key
 {
     id value = self[key];

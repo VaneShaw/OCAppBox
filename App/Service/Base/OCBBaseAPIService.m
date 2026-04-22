@@ -108,6 +108,18 @@
     [self sendRequest:[OCBRequest DELETE:path parameters:parameters] completion:completion];
 }
 
+- (void)GET:(NSString *)path
+       page:(NSInteger)page
+   pageSize:(NSInteger)pageSize
+ parameters:(nullable NSDictionary<NSString *,id> *)parameters
+ completion:(nullable OCBAPIServiceCompletion)completion
+{
+    NSMutableDictionary<NSString *, id> *mergedParameters = [[NSMutableDictionary alloc] initWithDictionary:parameters ?: @{}];
+    mergedParameters[[self pageNumberParameterKey]] = @(MAX(page, 1));
+    mergedParameters[[self pageSizeParameterKey]] = @(MAX(pageSize, 1));
+    [self sendRequest:[OCBRequest GET:path parameters:[mergedParameters copy]] completion:completion];
+}
+
 - (nullable NSString *)messageForError:(nullable NSError *)error defaultValue:(nullable NSString *)defaultValue
 {
     if (error == nil) {
@@ -134,6 +146,16 @@
 - (nullable NSError *)normalizedError:(nullable NSError *)error response:(nullable OCBNetworkResponse *)response
 {
     return error;
+}
+
+- (NSString *)pageNumberParameterKey
+{
+    return @"page";
+}
+
+- (NSString *)pageSizeParameterKey
+{
+    return @"page_size";
 }
 
 - (NSString *)stringForHTTPMethod:(OCBHTTPMethod)method

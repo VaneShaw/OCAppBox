@@ -140,6 +140,9 @@
 当前基线：
 
 - `AFNetworking`
+- `Masonry`
+- `SDWebImage`
+- `MJRefresh`
 
 ### 4.9 调试与校验
 

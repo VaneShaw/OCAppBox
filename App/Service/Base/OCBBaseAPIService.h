@@ -38,6 +38,13 @@ typedef void (^OCBAPIServiceCompletion)(id _Nullable data,
 - (void)DELETE:(NSString *)path
     parameters:(nullable NSDictionary<NSString *, id> *)parameters
     completion:(nullable OCBAPIServiceCompletion)completion;
+- (void)GET:(NSString *)path
+       page:(NSInteger)page
+   pageSize:(NSInteger)pageSize
+ parameters:(nullable NSDictionary<NSString *, id> *)parameters
+ completion:(nullable OCBAPIServiceCompletion)completion;
+- (NSString *)pageNumberParameterKey;
+- (NSString *)pageSizeParameterKey;
 - (nullable NSString *)messageForError:(nullable NSError *)error defaultValue:(nullable NSString *)defaultValue;
 - (nullable id)responseDataForResponse:(nullable OCBNetworkResponse *)response;
 - (nullable NSError *)normalizedError:(nullable NSError *)error response:(nullable OCBNetworkResponse *)response;

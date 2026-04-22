@@ -90,9 +90,27 @@
     XCTAssertEqualObjects([payload ocb_stringForKeyPath:@"payload.user.name" defaultValue:nil], @"OCAppBox");
     XCTAssertTrue([payload ocb_boolForKeyPath:@"meta.success" defaultValue:NO]);
     XCTAssertEqual([payload ocb_integerForKeyPath:@"meta.code" defaultValue:0], 200);
+    XCTAssertEqualWithAccuracy([payload ocb_doubleForKeyPath:@"meta.code" defaultValue:0], 200.0, 0.0001);
     XCTAssertEqualObjects([payload ocb_dictionaryForKeyPath:@"payload.user"], (@{@"name": @"OCAppBox"}));
     XCTAssertEqualObjects([payload ocb_arrayForKeyPath:@"payload.tabs"], (@[@"Home", @"Profile"]));
     XCTAssertNil([payload ocb_objectForKeyPath:@"payload.missing.value"]);
+}
+
+- (void)testStringAndImageAdditionsSupportURLAndRenderingHelpers
+{
+    NSString *rawPath = @"home/list?page=1&name=OC AppBox";
+    NSString *encodedPath = [rawPath ocb_urlEncodedString];
+    XCTAssertTrue([encodedPath containsString:@"%20"]);
+    XCTAssertNotNil([@"{\"name\":\"OCAppBox\"}" ocb_JSONDictionaryObject]);
+    XCTAssertNil([@"not-json" ocb_JSONDictionaryObject]);
+
+    UIImage *solidImage = [UIImage ocb_imageWithColor:[UIColor redColor] size:CGSizeMake(8.0, 8.0)];
+    XCTAssertEqualWithAccuracy(solidImage.size.width, 8.0, 0.001);
+    XCTAssertEqualWithAccuracy(solidImage.size.height, 8.0, 0.001);
+
+    UIImage *resizedImage = [solidImage ocb_resizedImageWithSize:CGSizeMake(20.0, 12.0)];
+    XCTAssertEqualWithAccuracy(resizedImage.size.width, 20.0, 0.001);
+    XCTAssertEqualWithAccuracy(resizedImage.size.height, 12.0, 0.001);
 }
 
 - (void)testColorAdditionsSupportHexValueAndHexString

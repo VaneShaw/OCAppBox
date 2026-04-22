@@ -1,4 +1,5 @@
 #import "OCBLoadingView.h"
+#import "OCBFoundationMacros.h"
 
 @interface OCBLoadingView ()
 
@@ -15,18 +16,9 @@
     if (self) {
         self.hidden = YES;
         self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.08];
-
-        _indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
-        _indicatorView.color = [UIColor darkGrayColor];
-
-        _textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _textLabel.font = [UIFont systemFontOfSize:14.0 weight:UIFontWeightMedium];
-        _textLabel.textAlignment = NSTextAlignmentCenter;
-        _textLabel.textColor = [UIColor darkGrayColor];
-        _textLabel.text = @"Loading";
-
-        [self addSubview:_indicatorView];
-        [self addSubview:_textLabel];
+        [self addSubview:self.indicatorView];
+        [self addSubview:self.textLabel];
+        self.text = nil;
     }
     return self;
 }
@@ -34,7 +26,7 @@
 - (void)setText:(NSString *)text
 {
     _text = [text copy];
-    self.textLabel.text = _text.length > 0 ? _text : @"Loading";
+    self.textLabel.text = _text.length > 0 ? _text : OCBLocalizedString(@"ocb.loading");
 }
 
 - (void)layoutSubviews
@@ -57,6 +49,26 @@
 {
     self.hidden = YES;
     [self.indicatorView stopAnimating];
+}
+
+- (UIActivityIndicatorView *)indicatorView
+{
+    if (_indicatorView == nil) {
+        _indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
+        _indicatorView.color = [UIColor darkGrayColor];
+    }
+    return _indicatorView;
+}
+
+- (UILabel *)textLabel
+{
+    if (_textLabel == nil) {
+        _textLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _textLabel.font = [UIFont systemFontOfSize:14.0 weight:UIFontWeightMedium];
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+        _textLabel.textColor = [UIColor darkGrayColor];
+    }
+    return _textLabel;
 }
 
 @end

@@ -7,6 +7,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)ocb_stringWithObject:(nullable id)object defaultValue:(nullable NSString *)defaultValue;
 - (NSString *)ocb_trimmedString;
 - (BOOL)ocb_isNotBlank;
+- (NSString *)ocb_urlEncodedString;
+- (nullable NSDictionary *)ocb_JSONDictionaryObject;
 
 @end
 

@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <math.h>
+#import "UIColor+OCBAdditions.h"
 
 #ifndef OCBFoundationMacros_h
 #define OCBFoundationMacros_h
@@ -46,5 +47,13 @@
 #define OCB_RADIANS_TO_DEGREES(RADIANS) ((RADIANS) * (180.0 / (CGFloat)M_PI))
 
 #define OCB_SAFE_CAST(OBJECT, CLASS) ([(OBJECT) isKindOfClass:[CLASS class]] ? (CLASS *)(OBJECT) : nil)
+
+#define OCBLocalizedString(KEY) NSLocalizedString((KEY), nil)
+#define OCBLocalizedStringFromTable(KEY, TABLE) NSLocalizedStringFromTable((KEY), (TABLE), nil)
+
+#define OCB_STRINGIFY(VALUE) [NSString stringWithFormat:@"%@", (VALUE) ?: @""]
+
+#define OCBColorHex(VALUE) [UIColor ocb_colorWithHexValue:(VALUE)]
+#define OCBColorHexA(VALUE, ALPHA) [UIColor ocb_colorWithHexValue:(VALUE) alpha:(ALPHA)]
 
 #endif /* OCBFoundationMacros_h */

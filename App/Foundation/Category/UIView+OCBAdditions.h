@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) CGFloat ocb_maxX;
 @property (nonatomic, assign, readonly) CGFloat ocb_maxY;
 @property (nonatomic, assign, readonly) UIEdgeInsets ocb_safeAreaInsetsCompatible;
+@property (nonatomic, assign) CGFloat ocb_cornerRadius;
 
 - (void)ocb_removeAllSubviews;
 

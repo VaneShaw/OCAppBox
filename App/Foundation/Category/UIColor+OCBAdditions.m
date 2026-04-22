@@ -1,6 +1,5 @@
 #import "UIColor+OCBAdditions.h"
 
-#import "OCBFoundationMacros.h"
 #import "NSString+OCBAdditions.h"
 
 static BOOL OCBHexStringToRGBAComponents(NSString *hexString, CGFloat *red, CGFloat *green, CGFloat *blue, CGFloat *alpha)
@@ -58,7 +57,7 @@ static BOOL OCBHexStringToRGBAComponents(NSString *hexString, CGFloat *red, CGFl
     CGFloat red = ((hexValue >> 16) & 0xFF) / 255.0;
     CGFloat green = ((hexValue >> 8) & 0xFF) / 255.0;
     CGFloat blue = (hexValue & 0xFF) / 255.0;
-    return [UIColor colorWithRed:red green:green blue:blue alpha:OCB_CLAMP(alpha, 0.0, 1.0)];
+    return [UIColor colorWithRed:red green:green blue:blue alpha:MIN(MAX(alpha, 0.0), 1.0)];
 }
 
 + (nullable UIColor *)ocb_colorWithHexString:(NSString *)hexString
@@ -79,7 +78,7 @@ static BOOL OCBHexStringToRGBAComponents(NSString *hexString, CGFloat *red, CGFl
     return [UIColor colorWithRed:red
                            green:green
                             blue:blue
-                           alpha:OCB_CLAMP(parsedAlpha * alpha, 0.0, 1.0)];
+                           alpha:MIN(MAX(parsedAlpha * alpha, 0.0), 1.0)];
 }
 
 @end

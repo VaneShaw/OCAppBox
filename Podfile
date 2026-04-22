@@ -8,6 +8,9 @@ target 'OCAppBox' do
   use_frameworks! :linkage => :static
 
   pod 'AFNetworking', '~> 4.0'
+  pod 'Masonry', '~> 1.1'
+  pod 'SDWebImage', '~> 5.0'
+  pod 'MJRefresh', '~> 3.7'
 
   target 'OCAppBoxTests' do
     inherit! :search_paths

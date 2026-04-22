@@ -105,6 +105,7 @@ open OCAppBox.xcworkspace
 ```bash
 ruby Scripts/generate_module.rb Profile
 ruby Scripts/generate_page.rb Profile Detail --type plain
+ruby Scripts/generate_route.rb Profile Detail
 ruby Scripts/generate_service.rb UserProfile --domain User
 ruby Scripts/generate_service.rb Feed --domain API --kind api
 ```
@@ -117,8 +118,25 @@ ruby Scripts/generate_service.rb Feed --domain API --kind api
   - 在指定模块下生成页面骨架
 - `generate_service.rb`
   - 生成状态型服务或接口型服务骨架
+- `generate_route.rb`
+  - 在 `App/Host/OCBDemoRouteCatalog` 中补齐页面路由常量，并输出可直接粘贴的路由注册代码片段
 
 但即使完全不用这些脚本，仓库也必须仍然可以直接开发。
+
+### 典型新增页面流程（5 分钟）
+
+```bash
+# 1) 生成页面骨架
+ruby Scripts/generate_page.rb Profile Settings --type plain
+
+# 2) 生成路由常量（自动更新 RouteCatalog）
+ruby Scripts/generate_route.rb Profile Settings
+```
+
+然后做两件事即可：
+
+1. 在 `Profile` 模块的 `BootstrapTask` 里注册路由（脚本会打印可粘贴代码）。
+2. 在 `App/Host/OCBStarterAppConfiguration.m` 的 `starterTabs` 增加一个 tab 项（或从已有页面入口跳转）。
 
 ## 当前已经内置的基础能力
 
@@ -133,13 +151,14 @@ ruby Scripts/generate_service.rb Feed --domain API --kind api
 - 通用宏
   - 线程切换、`weakify / strongify`、屏幕尺寸、像素线、安全类型转换
 - 常用分类
-  - `NSString / NSArray / NSDictionary / UIColor / UIView`
+  - `NSString / NSArray / NSDictionary / UIColor / UIView / UIImage`
 - 页面基类
   - `OCBBaseViewController`
   - `OCBBaseTableViewController`
   - `OCBBaseCollectionViewController`
 - 页面状态
   - loading / empty / error / toast
+  - `OCBListStateContainerView`（列表页 loading / 空态 / 错误 + 重试，Masonry 布局）
 - 页面安全区容器
   - 统一 `contentView`
 - 网络基座
@@ -156,7 +175,10 @@ ruby Scripts/generate_service.rb Feed --domain API --kind api
 
 当前 `Podfile` 内置的基线依赖是：
 
-- `AFNetworking`
+- `AFNetworking`（网络）
+- `Masonry`（布局）
+- `SDWebImage`（图片加载与缓存）
+- `MJRefresh`（列表下拉/上拉刷新）
 
 同时仓库已经把与该依赖相关的兼容处理沉淀在 `post_install` 中，新项目使用这个仓库时不需要每次重复补这一层基础配置。
 

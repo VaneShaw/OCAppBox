@@ -68,17 +68,19 @@ App
 建议包含：
 
 - `Macro`：日志、线程、弱引用、颜色、尺寸等常用宏
-- `Category`：`NSString`、`NSArray`、`NSDictionary`、`UIView` 等安全扩展
+- `Category`：`NSString`、`NSArray`、`NSDictionary`、`UIColor`、`UIView`、`UIImage` 等安全扩展
 - `Util`：时间、加解密、校验、设备信息、文件处理
 - `BaseModel`：统一模型基类和序列化约定
 
 当前仓库已经补齐一版 `Foundation` 起步能力：
 
-- `OCBFoundationMacros`
+- `OCBFoundationMacros`（含 `OCBLocalizedString` / `OCBColorHex` 等常用宏）
 - `NSArray+OCBAdditions`
 - `NSString+OCBAdditions`
 - `NSDictionary+OCBAdditions`
 - `UIColor+OCBAdditions`
+- `UIView+OCBAdditions`
+- `UIImage+OCBAdditions`
 - `OCBAppMetadata`
 
 ### 3.3 Infra
@@ -194,6 +196,7 @@ App
 - `OCBToast`
 - `OCBLoadingView`
 - `OCBEmptyStateView`
+- `OCBListStateContainerView`
 
 ## 4. 技术路线建议
 
@@ -253,6 +256,14 @@ ruby Scripts/generate_page.rb Home Feed --type table
 ```
 
 默认会根据页面类型生成 `plain / table / collection` 三类 `ViewController` 骨架，并落到对应模块的 `UI` 目录。
+
+当前仓库也已提供路由注册模板脚本：
+
+```bash
+ruby Scripts/generate_route.rb Home Feed
+```
+
+默认会把路由常量补进 `App/Host/OCBDemoRouteCatalog`，并输出可直接粘贴到模块 `BootstrapTask` 的 `router registerRoute` 代码片段，降低“新页面接入路由 + TabBar”的手工成本。
 
 当前仓库也已提供最小回归校验脚本：
 

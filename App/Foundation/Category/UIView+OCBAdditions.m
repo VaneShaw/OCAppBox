@@ -69,6 +69,17 @@
     return UIEdgeInsetsZero;
 }
 
+- (CGFloat)ocb_cornerRadius
+{
+    return self.layer.cornerRadius;
+}
+
+- (void)setOcb_cornerRadius:(CGFloat)ocb_cornerRadius
+{
+    self.layer.cornerRadius = MAX(0.0, ocb_cornerRadius);
+    self.layer.masksToBounds = ocb_cornerRadius > 0.0;
+}
+
 - (void)ocb_removeAllSubviews
 {
     NSArray<UIView *> *subviews = [self.subviews copy];

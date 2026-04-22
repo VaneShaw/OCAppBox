@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)ocb_boolForKeyPath:(nullable NSString *)keyPath defaultValue:(BOOL)defaultValue;
 - (NSInteger)ocb_integerForKey:(id)key defaultValue:(NSInteger)defaultValue;
 - (NSInteger)ocb_integerForKeyPath:(nullable NSString *)keyPath defaultValue:(NSInteger)defaultValue;
+- (double)ocb_doubleForKey:(id)key defaultValue:(double)defaultValue;
+- (double)ocb_doubleForKeyPath:(nullable NSString *)keyPath defaultValue:(double)defaultValue;
 - (nullable NSDictionary *)ocb_dictionaryForKey:(id)key;
 - (nullable NSDictionary *)ocb_dictionaryForKeyPath:(nullable NSString *)keyPath;
 - (nullable NSArray *)ocb_arrayForKey:(id)key;
